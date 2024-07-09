@@ -116,4 +116,24 @@ def play_game(player_board, computer_board, max_shots):
             if result == "Hit":
                 scores['player'] += 1
             player_shots += 1
-            turn = "computer"                       
+            turn = "computer"   
+
+        else:
+            print("\nComputer's turn!")
+            while True:
+                x = random_point(player_board.size)
+                y = random_point(player_board.size)
+                if (x, y) not in player_board.guesses:
+                    break
+            result = player_board.guess(x, y)
+            print(f"Computer guessed ({x}, {y}) - {result}")
+            if result == "Hit":
+                scores['computer'] += 1
+            computer_shots += 1
+            turn = "player"
+        if scores['player'] == player_board.num_ships:
+            print("Congratulations! You have won the game!")
+            break
+        elif scores['computer'] == player_board.num_ships:
+            print("Oh no! The computer has won the game!")
+            break                        
