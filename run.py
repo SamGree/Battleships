@@ -67,3 +67,13 @@ def random_point(size):
         Returns a random point on the board between 0 and size
         """
         return randint(0, size - 1)
+
+def populate_board(board):
+    """
+    Populate the board with ships at random locations
+    """
+    while len(board.ships) < board.num_ships:
+        x = random_point(board.size)
+        y = random_point(board.size)
+        if (x, y) not in board.ships:
+            board.add_ship(x, y)        
