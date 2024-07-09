@@ -47,3 +47,17 @@ def guess(self, x, y):
         else:
             self.board[x][y] = 'X'     
             return "Miss"
+
+def add_ship(self, x, y):
+
+        """
+        Adds a ship at the specified coordinates (x, y)
+        if the maximum number of ships has not been reached.
+        For player boards, marks the ship's position.
+        """
+        if len(self.ships) >= self.num_ships:
+            print("Error: you cannot add more ships!")
+        else:
+            self.ships.append((x, y))
+            if self.type == "player":
+                self.board[x][y] = "~"            
