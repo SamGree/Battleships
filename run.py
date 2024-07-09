@@ -136,4 +136,12 @@ def play_game(player_board, computer_board, max_shots):
             break
         elif scores['computer'] == player_board.num_ships:
             print("Oh no! The computer has won the game!")
-            break                        
+            break   
+
+        if player_shots >= max_shots or computer_shots >= max_shots:
+            print("Game over! Maximum number of shots reached.")
+            print("\nFinal scores:")
+            print(f"Player: {scores['player']}")
+            print(f"Computer: {scores['computer']}")
+
+                     
