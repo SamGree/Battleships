@@ -93,4 +93,14 @@ def make_guess(board):
             else:
                 print("Invalid or repeated guess. Try again.")
         except ValueError:
-            print("Invalid input. Please enter numbers only.")                 
+            print("Invalid input. Please enter numbers only.")     
+
+
+def play_game(player_board, computer_board, max_shots):
+    """
+    Main game loop for playing the game
+    """
+    print("Let's start the game!")
+    turn = "player"
+    player_shots = 0
+    computer_shots = 0                        
