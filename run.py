@@ -76,4 +76,21 @@ def populate_board(board):
         x = random_point(board.size)
         y = random_point(board.size)
         if (x, y) not in board.ships:
-            board.add_ship(x, y)        
+            board.add_ship(x, y)   
+
+def make_guess(board):
+    """
+    Make a guess for the player, ensuring it's a valid and new guess
+    """
+    while True:
+        try:
+            x = int(input("Guess Row: "))
+            y = int(input("Guess Col: "))
+            valid_coords = valid_coordinates(x, y, board.size)
+            new_guess = (x, y) not in board.guesses
+            if valid_coords and new_guess:
+                return x, y
+            else:
+                print("Invalid or repeated guess. Try again.")
+        except ValueError:
+            print("Invalid input. Please enter numbers only.")                 
