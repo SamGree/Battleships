@@ -29,4 +29,14 @@ class Board:
                 print(str(idx) + " " + "  |".join(row_to_print) + "  |")
             else:
                 print(str(idx) + " " + "  |".join(row) + "  |")    
-        print("  " + "---|" * self.size)        
+        print("  " + "---|" * self.size)      
+
+
+    def guess(self, x, y):
+        self.guesses.append((x, y))      
+        if (x, y) in self.ships:
+            self.board[x][y] = '*'
+            return "Hit"
+        else:
+            self.board[x][y] = 'X'     
+            return "Miss"
