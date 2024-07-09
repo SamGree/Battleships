@@ -103,4 +103,17 @@ def play_game(player_board, computer_board, max_shots):
     print("Let's start the game!")
     turn = "player"
     player_shots = 0
-    computer_shots = 0                        
+    computer_shots = 0 
+
+    while player_shots < max_shots and computer_shots < max_shots:
+        if turn == "player":
+            print("\nPlayer's turn!")
+            player_board.print()
+            computer_board.print(hide_ships=True)
+            x, y = make_guess(computer_board)
+            result = computer_board.guess(x, y)
+            print(f"Player guessed ({x}, {y}) - {result}")
+            if result == "Hit":
+                scores['player'] += 1
+            player_shots += 1
+            turn = "computer"                       
