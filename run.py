@@ -60,4 +60,10 @@ def add_ship(self, x, y):
         else:
             self.ships.append((x, y))
             if self.type == "player":
-                self.board[x][y] = "~"            
+                self.board[x][y] = "~"  
+
+def random_point(size):
+        """
+        Returns a random point on the board between 0 and size
+        """
+        return randint(0, size - 1)
