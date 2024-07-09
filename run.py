@@ -18,3 +18,15 @@ class Board:
         self.type = type
         self.guesses = []
         self.ships = []
+
+    def print(self, hide_ships = False) :
+        print(f"{self.name}'s board:")   
+        print("   " + "   ".join(str(i) for i in range(self.size)))
+        for idx, row in enumerate(self.board):
+            print("  " + "---|" * self.size)
+            if hide_ships:
+                row_to_print = [" " if cell == "@" else cell for cell in row]
+                print(str(idx) + " " + "  |".join(row_to_print) + "  |")
+            else:
+                print(str(idx) + " " + "  |".join(row) + "  |")    
+        print("  " + "---|" * self.size)        
