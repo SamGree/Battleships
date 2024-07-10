@@ -139,6 +139,7 @@ def play_game(player_board, computer_board, max_shots):
             break   
 
         if player_shots >= max_shots or computer_shots >= max_shots:
+        # Check if the maximum number of shots has been reached for both player
             print("Game over! Maximum number of shots reached.")
             print("\nFinal scores:")
             print(f"Player: {scores['player']}")
