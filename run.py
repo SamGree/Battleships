@@ -145,4 +145,10 @@ def play_game(player_board, computer_board, max_shots):
             print(f"Player: {scores['player']}")
             print(f"Computer: {scores['computer']}")
 
+def new_game():
+    """
+    Start a new game, set the board size and number of ships,
+    reset the scores, and initialize the boards.
+    """            
+
                      
