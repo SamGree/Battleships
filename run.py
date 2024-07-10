@@ -149,6 +149,11 @@ def new_game():
     """
     Start a new game, set the board size and number of ships,
     reset the scores, and initialize the boards.
-    """            
+    """   
+    size = 5
+    num_ships = 5
+    max_shots = 12  # Maximum number of shots each player can take
+    scores['computer'] = 0
+    scores['player'] = 0         
 
                      
