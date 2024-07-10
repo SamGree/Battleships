@@ -150,10 +150,32 @@ def new_game():
     Start a new game, set the board size and number of ships,
     reset the scores, and initialize the boards.
     """   
-    size = 5
-    num_ships = 5
+    size = 5 # Max size of board
+    num_ships = 5  # Max ships on board
     max_shots = 12  # Maximum number of shots each player can take
     scores['computer'] = 0
-    scores['player'] = 0         
+    scores['player'] = 0     
 
+    print("-" * 35)
+    print("Welcome to Player vs Computer Battleships!")
+    print(f"Board size: {size}. Number of ships: {num_ships}.")
+    print("Top left corner is row: 0, col: 0")
+    print("-" * 35)
+    player_name = input("your name please? \n")
+    print("-" * 35)    
+    
+    computer_board = Board(size, num_ships, "Computer", type="computer")
+    player_board = Board(size, num_ships, player_name, type="player")
+    # Start computer and player boards with specified size and number of ships
+    
+    populate_board(computer_board)
+    populate_board(player_board)
+    # Immigrate the computer and player boards with ships
                      
+
+    play_game(player_board, computer_board, max_shots)
+    # Start and run the game loop with the player
+    #  and computer boards and a maximum number of shots        
+
+new_game()
+    # set off and start a new game             
