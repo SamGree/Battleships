@@ -1,27 +1,23 @@
 from random import randint
 
-
+# Initialize scores for both the computer and the player
 scores = {'computer': 0, 'player': 0}
-"""
-Initializes a dictionary to keep track of the scores
-for the computer and the player, both starting at 0.
-"""
-        
+
 class Board:
-        """
-        Defines a class Board which will represent the game board.
-        """
-def __init__(self, size, num_ships, name, type):
+    """
+    A class to represent a board in a game
+    """
+    def __init__(self, size, num_ships, name, type):
         self.size = size
-        self.board =[[" " for _ in range(size)] for _ in range(size)]
+        self.board = [[" " for _ in range(size)] for _ in range(size)]
         self.num_ships = num_ships
         self.name = name
         self.type = type
         self.guesses = []
         self.ships = []
 
-def print(self, hide_ships = False) :
-        print(f"{self.name}'s board:")   
+    def print(self, hide_ships=False):
+        print(f"{self.name}'s Board:")
         print("   " + "   ".join(str(i) for i in range(self.size)))
         for idx, row in enumerate(self.board):
             print("  " + "---|" * self.size)
@@ -29,44 +25,37 @@ def print(self, hide_ships = False) :
                 row_to_print = [" " if cell == "@" else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row_to_print) + "  |")
             else:
-                print(str(idx) + " " + "  |".join(row) + "  |")    
-        print("  " + "---|" * self.size)      
+                print(str(idx) + " " + "  |".join(row) + "  |")
+        print("  " + "---|" * self.size)
 
-
-def guess(self, x, y):
-        """
-        Process a guess at coordinates (x, y).
-        This method checks if the guessed coordinates hit a ship.
-        It updates the board and the guesses list accordingly.
-        """
-
-        self.guesses.append((x, y))      
+    def guess(self, x, y):
+        self.guesses.append((x, y))
         if (x, y) in self.ships:
             self.board[x][y] = '*'
             return "Hit"
         else:
-            self.board[x][y] = 'X'     
+            self.board[x][y] = 'X'
             return "Miss"
 
-def add_ship(self, x, y):
-
-        """
-        Adds a ship at the specified coordinates (x, y)
-        if the maximum number of ships has not been reached.
-        For player boards, marks the ship's position.
-        """
+    def add_ship(self, x, y):
         if len(self.ships) >= self.num_ships:
             print("Error: you cannot add more ships!")
         else:
             self.ships.append((x, y))
             if self.type == "player":
-                self.board[x][y] = "~"  
+                self.board[x][y] = "~"
 
 def random_point(size):
-        """
-        Returns a random point on the board between 0 and size
-        """
-        return randint(0, size - 1)
+    """
+    Returns a random point on the board between 0 and size
+    """
+    return randint(0, size - 1)
+
+def valid_coordinates(x, y, size):
+    """
+    Check if the given coordinates are within the board limits
+    """
+    return 0 <= x < size and 0 <= y < size
 
 def populate_board(board):
     """
@@ -76,7 +65,7 @@ def populate_board(board):
         x = random_point(board.size)
         y = random_point(board.size)
         if (x, y) not in board.ships:
-            board.add_ship(x, y)   
+            board.add_ship(x, y)
 
 def make_guess(board):
     """
@@ -93,8 +82,7 @@ def make_guess(board):
             else:
                 print("Invalid or repeated guess. Try again.")
         except ValueError:
-            print("Invalid input. Please enter numbers only.")     
-
+            print("Invalid input. Please enter numbers only.")
 
 def play_game(player_board, computer_board, max_shots):
     """
@@ -103,7 +91,7 @@ def play_game(player_board, computer_board, max_shots):
     print("Let's start the game!")
     turn = "player"
     player_shots = 0
-    computer_shots = 0 
+    computer_shots = 0
 
     while player_shots < max_shots and computer_shots < max_shots:
         if turn == "player":
@@ -116,8 +104,7 @@ def play_game(player_board, computer_board, max_shots):
             if result == "Hit":
                 scores['player'] += 1
             player_shots += 1
-            turn = "computer"   
-
+            turn = "computer"
         else:
             print("\nComputer's turn!")
             while True:
@@ -136,46 +123,44 @@ def play_game(player_board, computer_board, max_shots):
             break
         elif scores['computer'] == player_board.num_ships:
             print("Oh no! The computer has won the game!")
-            break   
+            break
 
-        if player_shots >= max_shots or computer_shots >= max_shots:
-        # Check if the maximum number of shots has been reached for both player
-            print("Game over! Maximum number of shots reached.")
-            print("\nFinal scores:")
-            print(f"Player: {scores['player']}")
-            print(f"Computer: {scores['computer']}")
+    if player_shots >= max_shots or computer_shots >= max_shots:
+        print("Game over! Maximum number of shots reached.")
+        print("\nFinal scores:")
+        print(f"Player: {scores['player']}")
+        print(f"Computer: {scores['computer']}")
 
 def new_game():
     """
     Start a new game, set the board size and number of ships,
     reset the scores, and initialize the boards.
-    """   
-    size = 5 # Max size of board
-    num_ships = 5  # Max ships on board
-    max_shots = 12  # Maximum number of shots each player can take
+    """
+    size = 5
+    num_ships = 5
+    max_shots = 20  # Maximum number of shots each player can take
     scores['computer'] = 0
-    scores['player'] = 0     
+    scores['player'] = 0
 
     print("-" * 35)
     print("Welcome to Player vs Computer Battleships!")
     print(f"Board size: {size}. Number of ships: {num_ships}.")
     print("Top left corner is row: 0, col: 0")
     print("-" * 35)
-    player_name = input("your name please? \n")
-    print("-" * 35)    
-    
+    player_name = input("What is your name? \n")
+    print("-" * 35)
+
     computer_board = Board(size, num_ships, "Computer", type="computer")
     player_board = Board(size, num_ships, player_name, type="player")
     # Start computer and player boards with specified size and number of ships
-    
+
     populate_board(computer_board)
     populate_board(player_board)
-    # Immigrate the computer and player boards with ships
-                     
+    # Populate the computer and player boards with ships
 
     play_game(player_board, computer_board, max_shots)
     # Start and run the game loop with the player
-    #  and computer boards and a maximum number of shots        
+    # and computer boards and a maximum number of shots        
 
+# Start a new game
 new_game()
-    # set off and start a new game             
