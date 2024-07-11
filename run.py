@@ -1,12 +1,18 @@
 from random import randint
+from colorama import Fore, Style, init
+
+# Initialize colorama
+init(autoreset=True)
 
 # Initialize scores for both the computer and the player
 scores = {'computer': 0, 'player': 0}
+
 
 class Board:
     """
     A class to represent a board in a game
     """
+
     def __init__(self, size, num_ships, name, type):
         self.size = size
         self.board = [[" " for _ in range(size)] for _ in range(size)]
@@ -25,16 +31,19 @@ class Board:
                 row_to_print = [" " if cell == "@" else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row_to_print) + "  |")
             else:
+                row_to_print = [Fore.RED + cell + Style.RESET_ALL if cell == '*'
+                else cell
+                for cell in row]
                 print(str(idx) + " " + "  |".join(row) + "  |")
         print("  " + "---|" * self.size)
 
     def guess(self, x, y):
         self.guesses.append((x, y))
         if (x, y) in self.ships:
-            self.board[x][y] = '*'
+            self.board[x][y] = Fore.LIGHTRED_EX + '*' + Style.RESET_ALL
             return "Hit"
         else:
-            self.board[x][y] = 'X'
+            self.board[x][y] = Fore.LIGHTBLUE_EX + 'X' + Style.RESET_ALL
             return "Miss"
 
     def add_ship(self, x, y):
@@ -45,17 +54,20 @@ class Board:
             if self.type == "player":
                 self.board[x][y] = "~"
 
+
 def random_point(size):
     """
     Returns a random point on the board between 0 and size
     """
     return randint(0, size - 1)
 
+
 def valid_coordinates(x, y, size):
     """
     Check if the given coordinates are within the board limits
     """
     return 0 <= x < size and 0 <= y < size
+
 
 def populate_board(board):
     """
@@ -66,6 +78,7 @@ def populate_board(board):
         y = random_point(board.size)
         if (x, y) not in board.ships:
             board.add_ship(x, y)
+
 
 def make_guess(board):
     """
@@ -83,6 +96,7 @@ def make_guess(board):
                 print("Invalid or repeated guess. Try again.")
         except ValueError:
             print("Invalid input. Please enter numbers only.")
+
 
 def play_game(player_board, computer_board, max_shots):
     """
@@ -131,6 +145,7 @@ def play_game(player_board, computer_board, max_shots):
         print(f"Player: {scores['player']}")
         print(f"Computer: {scores['computer']}")
 
+
 def new_game():
     """
     Start a new game, set the board size and number of ships,
@@ -160,7 +175,9 @@ def new_game():
 
     play_game(player_board, computer_board, max_shots)
     # Start and run the game loop with the player
-    # and computer boards and a maximum number of shots        
+    # and computer boards and a maximum number of shots
 
 # Start a new game
+
+
 new_game()
