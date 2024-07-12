@@ -31,7 +31,7 @@ class Board:
                 row_to_print = [" " if cell == "@" else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row_to_print) + "  |")
             else:
-                row_to_print = [Fore.RED + cell + Style.RESET_ALL 
+                row_to_print = [Fore.RED + cell + Style.RESET_ALL
                                 if cell == '*' else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row) + "  |")
         print("  " + "---|" * self.size)
