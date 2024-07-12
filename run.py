@@ -153,14 +153,16 @@ def new_game():
     """
     size = 5
     num_ships = 5
-    max_shots = 20  # Maximum number of shots each player can take
+    max_shots = 12  # Maximum number of shots each player can take
     scores['computer'] = 0
     scores['player'] = 0
 
     print("-" * 35)
-    print("Welcome to Player vs Computer Battleships!")
-    print(f"Board size: {size}. Number of ships: {num_ships}.")
-    print("Top left corner is row: 0, col: 0")
+    print("-Welcome to Battleships: Player vs Computer!")
+    print("-Game Setup: Board size is 5x5 with 5 ships.")
+    print("-Coordinates: Top left corner is at (0, 0).")
+    print("-Shooting Rules: Enter coordinates between 0 and 4.")
+    print(f"-Objective: Sink all ships with in {max_shots} shots to win!")
     print("-" * 35)
     player_name = input("What is your name? \n")
     print("-" * 35)
