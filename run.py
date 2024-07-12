@@ -31,9 +31,8 @@ class Board:
                 row_to_print = [" " if cell == "@" else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row_to_print) + "  |")
             else:
-                row_to_print = [Fore.RED + cell + Style.RESET_ALL if cell == '*'
-                else cell
-                for cell in row]
+                row_to_print = [Fore.RED + cell + Style.RESET_ALL 
+                                if cell == '*' else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row) + "  |")
         print("  " + "---|" * self.size)
 
@@ -158,10 +157,8 @@ def new_game():
     scores['player'] = 0
 
     print("-" * 35)
-    print(
-        Fore.LIGHTGREEN_EX + 
-        "-Welcome to Battleships: Player vs Computer!" 
-        + Style.RESET_ALL)
+    print(Fore.LIGHTGREEN_EX +
+          "-Welcome to Battleships: Player vs Computer!" + Style.RESET_ALL)
     print("-Game Setup: Board size is 5x5 with 5 ships.")
     print("-Coordinates: Top left corner is at (0, 0).")
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
