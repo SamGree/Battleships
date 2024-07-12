@@ -158,7 +158,10 @@ def new_game():
     scores['player'] = 0
 
     print("-" * 35)
-    print("-Welcome to Battleships: Player vs Computer!")
+    print(
+        Fore.LIGHTGREEN_EX + 
+        "-Welcome to Battleships: Player vs Computer!" 
+        + Style.RESET_ALL)
     print("-Game Setup: Board size is 5x5 with 5 ships.")
     print("-Coordinates: Top left corner is at (0, 0).")
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
