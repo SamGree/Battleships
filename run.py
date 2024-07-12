@@ -164,7 +164,7 @@ def new_game():
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
     print(f"-Objective: Sink all ships with in {max_shots} shots to win!")
     print("-" * 35)
-    player_name = input("What is your name? \n")
+    player_name = input("Your name Please? \n")
     print("-" * 35)
 
     computer_board = Board(size, num_ships, "Computer", type="computer")
