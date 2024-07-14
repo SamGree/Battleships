@@ -94,7 +94,7 @@ def make_guess(board):
             else:
                 print("Invalid or repeated guess. Try again.")
         except ValueError:
-            print("Invalid input. Please enter numbers only.")
+            print("Invalid input. Please enter numbers only 0 to 4.")
 
 
 def play_game(player_board, computer_board, max_shots):
@@ -159,7 +159,7 @@ def new_game():
     print("-" * 35)
     print(Fore.LIGHTGREEN_EX +
           "-Welcome to Battleships: Player vs Computer!" + Style.RESET_ALL)
-    print("-Game Setup: Board size is 5x5 with 5 ships.")
+    print("-Game Setup:Board size is 5x5 with 5 ships.")
     print("-Coordinates: Top left corner is at (0, 0).")
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
     print(f"-Objective: Sink all ships with in {max_shots} shots to win!")

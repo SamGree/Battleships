@@ -11,9 +11,11 @@
 - [Class: Board](#class-board)
 - [Attributes](#attributes)
 - [Methods](#methods)
+- [Functions for Game Logic](#functions-for-game-logic)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
+- [Flowchart](#flowchart)
 
 ## Features
 - Play the classic Battleships game against the computer.
@@ -34,7 +36,7 @@
     pip3 frezze --local > requirements.txt
     ```
 ## Usage 
-    - To start the game, just type your player name
+    - To start the game, just type your name.
 
 ## Game Rules
   - Board Size: The game is played on a 5x5 grid.
@@ -72,7 +74,8 @@ The Board class represents the game board for each player.
   - make_guess(board): Prompts the player to make a guess, ensuring it's valid and new.
   - play_game(player_board, computer_board, max_shots): Main game loop for playing the game.
   - new_game(): Starts a new game, setting up the boards and initializing scores.
-
+#### Flowchart
+  ![Tux, the Linux mascot](/readme.images/design..png)
 
 
 
@@ -83,5 +86,6 @@ The Board class represents the game board for each player.
 
 ## Acknowledgements
  - colorama for terminal color formatting.
+ ![Tux, the Linux mascot](/readme.images/colorama.file.png)
 
 
