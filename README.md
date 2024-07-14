@@ -1,7 +1,7 @@
 # *Battleships Game*
 
   - The Battleships game is a turn-based game where the player competes against the computer. The game consists of a grid (board) where ships are placed. Players take turns guessing the locations of the opponent's ships, trying to "hit" and sink them.
-  - Link to the battleships game 
+  > - Link to the battleships game 
   > <https://battleships-sam-f594730cad42.herokuapp.com/>
 
   - ![Tux, the Linux mascot](/readme.images/ami.responsive.ships.png) 
