@@ -15,7 +15,6 @@
 - [Design Components](#design-components)
 - [Class: Board](#class-board)
 - [Functions for Game Logic](#functions-for-game-logic)
-- [Contributing](#contributing)
 - [Flowchart](#flowchart)
 - [How to play](#how-to-play)
 - [Testing](#testing)
@@ -89,7 +88,7 @@
 > - ![Tux, the Linux mascot](/readme.images/requirements.png)
 
 ## **Flowchart**
-- ![Tux, the Linux mascot](/readme.images/design..png)
+- ![Tux, the Linux mascot](/readme.images/flowchart.png)
 
 > ## **How to play**
 > - In this game you manually type your name to start the game. then board grids will be displayed for both first Computer grid then second player grid. Row will be first to write between 0  to 4, then col will appear this also 0 to 4 .
@@ -121,7 +120,27 @@
 > ![Tux, the Linux mascot](/readme.images/computer.won.png)
 ---
 - if you want to start the game again, simply press RUN PROGRAM.
-- ![Tux, the Linux mascot](/readme.images/run%20program.png)
+- ![Tux, the Linux mascot](/readme.images/run,program.png)
+
+## Deployment
+ -  Deploy this project to Heroku, I did the following steps
+  1. Push all codes to Github.
+  2. Go to Heroku page and login.
+  3. Create new app.
+  4. App name (battleships) and choose Europe for region.
+  5. create app.
+  6. Click GitHub, connect to Github.
+  7. Go to the settings tab.
+  8.  Config vars
+  9.  KEY is (PORT) and VALUE is (8000) then click ADD. 
+  10. Add buildpack.
+  11. Select Python, then save changes.
+  12. Select Nodejs, then save changes.
+  13. Ensure that Heroku/Python is at the top of the list, followed by Heroku/Nodejs
+ 14. Go to the deploy tab and Select github.
+ 15. confirm what I want to connect to github.
+ 16. Now we can search for github repository name. 
+  and  Scroll down to Manual Deploy and select deploy branch finally click connect.
 
 > ### Testing
 > - All of the code within this program was tested using Code Institute's PEP8.
