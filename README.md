@@ -18,7 +18,8 @@
 - [Contributing](#contributing)
 - [Flowchart](#flowchart)
 - [How to play](#how-to-play)
-- [License](#license)
+- [Testing](#testing)
+- [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -85,6 +86,7 @@
 
 > ## **User Interface.**
 > - The user interface will be text-based, using print statements to display the game state and prompts for player input. The colorama library can be used to enhance the display with colors.
+> - ![Tux, the Linux mascot](/readme.images/requirements.png)
 
 ## **Flowchart**
 - ![Tux, the Linux mascot](/readme.images/design..png)
@@ -121,15 +123,18 @@
 - if you want to start the game again, simply press RUN PROGRAM.
 - ![Tux, the Linux mascot](/readme.images/run%20program.png)
 
+> ### Testing
+> - All of the code within this program was tested using Code Institute's PEP8.
+> ![Tux, the Linux mascot](/readme.images/pep8.png)
 
+## Credits
+ - This video help me to understand basic python <https://www.youtube.com/watch?v=XKHEtdqhLK8>
+ - The main structure of this game coming from code institute including the codes.<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>
 
-
-
-## **Contributing**
-- This project is licensed under the MIT License.
+ - Use ChatGPT for idea and how to generate the code.
 
 ## **Acknowledgements**
- - colorama for terminal color formatting.
-  - ![Tux, the Linux mascot](/readme.images/requirements.png)
+ - Special thanks to my mentor **Luke Buchanan** for the feedback as always. 
+ -  Thanks to **Tutor Assistance** for their constant support and guidance whenever I needed help.
 
 
