@@ -12,7 +12,7 @@ class Board:
     """
     A class to represent a board in a game
     """
-    # code institute
+    # code institute 
     def __init__(self, size, num_ships, name, type):
         self.size = size
         # change
@@ -22,7 +22,7 @@ class Board:
         self.type = type
         self.guesses = []
         self.ships = []
-        # I wrote this code
+        # My code
     def print(self, hide_ships=False):
         print(f"{self.name}'s Board:")
         print("   " + "   ".join(str(i) for i in range(self.size)))
@@ -152,41 +152,42 @@ def play_game(player_board, computer_board, max_shots):
 
    # code institute
 def new_game():
-    """
+    """sam
     Start a new game, set the board size and number of ships,
     reset the scores, and initialize the boards.
     """
     size = 5
     num_ships = 5
     # I added max shots here 
-    max_shots = 12  # Maximum number of shots each player can take
+    max_shots = 12  
     scores['computer'] = 0
     scores['player'] = 0
 
     print("-" * 35)
-    # I added color for this code
+    # I added color for welcome message
     print(Fore.LIGHTGREEN_EX +
           "-Welcome to Battleships: Player vs Computer!" + Style.RESET_ALL)
     print("-Game Setup:Board size is 5x5 with 5 ships.")
     print("-Coordinates: Top left corner is at (0, 0).")
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
-    # I add new print line for mat shots here
+    # I add new print line for max shots here
     print(f"-Objective: Sink all ships with in {max_shots} shots to win!")
     # code institute
     print("-" * 35)
-
+    # I add this loop for player name, alphabet only
     while True:
-        player_name = input("Your name Please? \n")
+        player_name = input(Fore.LIGHTGREEN_EX + "Your name Please?\n" + Style.RESET_ALL)
         if player_name.isalpha():
             break
         else:
             print("Invalid input.")
-    print("-" * 35)
 
+    print("-" * 35)
+    # code institute
     computer_board = Board(size, num_ships, "Computer", type="computer")
     player_board = Board(size, num_ships, player_name, type="player")
     # Start computer and player boards with specified size and number of ships
-
+    
     populate_board(computer_board)
     populate_board(player_board)
     # Populate the computer and player boards with ships
