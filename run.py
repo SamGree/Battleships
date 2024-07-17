@@ -12,16 +12,17 @@ class Board:
     """
     A class to represent a board in a game
     """
-
+    # code institute
     def __init__(self, size, num_ships, name, type):
         self.size = size
+        # change
         self.board = [[" " for _ in range(size)] for _ in range(size)]
         self.num_ships = num_ships
         self.name = name
         self.type = type
         self.guesses = []
         self.ships = []
-
+        # I wrote this code
     def print(self, hide_ships=False):
         print(f"{self.name}'s Board:")
         print("   " + "   ".join(str(i) for i in range(self.size)))
@@ -35,17 +36,19 @@ class Board:
                                 if cell == '*' else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row) + "  |")
         print("  " + "---|" * self.size)
-
-    def guess(self, x, y):
+        # code institute
+    def guess(self, x, y): 
         self.guesses.append((x, y))
         if (x, y) in self.ships:
+            # my code
             self.board[x][y] = Fore.LIGHTRED_EX + '*' + Style.RESET_ALL
             return "Hit"
         else:
             self.board[x][y] = Fore.LIGHTBLUE_EX + 'X' + Style.RESET_ALL
             return "Miss"
-
+        # my code
     def add_ship(self, x, y):
+        # code institute
         if len(self.ships) >= self.num_ships:
             print("Error: you cannot add more ships!")
         else:
@@ -53,25 +56,26 @@ class Board:
             if self.type == "player":
                 self.board[x][y] = "~"
 
-
+        # code institute
 def random_point(size):
     """
     Returns a random point on the board between 0 and size
     """
     return randint(0, size - 1)
 
-
+   # code institute
 def valid_coordinates(x, y, size):
     """
     Check if the given coordinates are within the board limits
     """
     return 0 <= x < size and 0 <= y < size
 
-
+    
 def populate_board(board):
     """
     Populate the board with ships at random locations
-    """
+    """  
+    # my code
     while len(board.ships) < board.num_ships:
         x = random_point(board.size)
         y = random_point(board.size)
@@ -83,6 +87,7 @@ def make_guess(board):
     """
     Make a guess for the player, ensuring it's a valid and new guess
     """
+    # my code
     while True:
         try:
             x = int(input("Guess Row: "))
@@ -101,6 +106,7 @@ def play_game(player_board, computer_board, max_shots):
     """
     Main game loop for playing the game
     """
+    # my code
     print("Let's start the game!")
     turn = "player"
     player_shots = 0
@@ -144,7 +150,7 @@ def play_game(player_board, computer_board, max_shots):
         print(f"Player: {scores['player']}")
         print(f"Computer: {scores['computer']}")
 
-
+   # code institute
 def new_game():
     """
     Start a new game, set the board size and number of ships,
@@ -152,19 +158,29 @@ def new_game():
     """
     size = 5
     num_ships = 5
+    # I added max shots here 
     max_shots = 12  # Maximum number of shots each player can take
     scores['computer'] = 0
     scores['player'] = 0
 
     print("-" * 35)
+    # I added color for this code
     print(Fore.LIGHTGREEN_EX +
           "-Welcome to Battleships: Player vs Computer!" + Style.RESET_ALL)
     print("-Game Setup:Board size is 5x5 with 5 ships.")
     print("-Coordinates: Top left corner is at (0, 0).")
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
+    # I add new print line for mat shots here
     print(f"-Objective: Sink all ships with in {max_shots} shots to win!")
+    # code institute
     print("-" * 35)
-    player_name = input("Your name Please? \n")
+
+    while True:
+        player_name = input("Your name Please? \n")
+        if player_name.isalpha():
+            break
+        else:
+            print("Invalid input.")
     print("-" * 35)
 
     computer_board = Board(size, num_ships, "Computer", type="computer")
@@ -174,7 +190,8 @@ def new_game():
     populate_board(computer_board)
     populate_board(player_board)
     # Populate the computer and player boards with ships
-
+    
+    # I added max shots here 
     play_game(player_board, computer_board, max_shots)
     # Start and run the game loop with the player
     # and computer boards and a maximum number of shots
