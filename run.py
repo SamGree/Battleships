@@ -152,7 +152,7 @@ def play_game(player_board, computer_board, max_shots):
 
    # code institute
 def new_game():
-    """sam
+    """
     Start a new game, set the board size and number of ships,
     reset the scores, and initialize the boards.
     """
@@ -177,7 +177,7 @@ def new_game():
     # I add this loop for player name, alphabet only
     while True:
         player_name = input("-Your name Please?\n")
-        if player_name.isalpha():
+        if player_name.isalpha() and len(player_name) <= 10:
             break
         else:
             print("-Invalid input.")
