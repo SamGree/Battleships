@@ -150,7 +150,7 @@
  - This video help me to understand basic python <https://www.youtube.com/watch?v=XKHEtdqhLK8>
  - The main structure of this game coming from code institute including the codes.<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>
 
- - Use ChatGPT for idea and how to generate the code.
+ 
 
 ## **Acknowledgements**
  - Special thanks to my mentor **Luke Buchanan** for the feedback as always. 

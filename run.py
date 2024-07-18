@@ -23,7 +23,7 @@ class Board:
         self.guesses = []
         self.ships = []
         # My code
-    def print(self, hide_ships=False):
+    def print_board(self, hide_ships=False):
         print(f"{self.name}'s Board:")
         print("   " + "   ".join(str(i) for i in range(self.size)))
         for idx, row in enumerate(self.board):
@@ -115,8 +115,8 @@ def play_game(player_board, computer_board, max_shots):
     while player_shots < max_shots and computer_shots < max_shots:
         if turn == "player":
             print("\nPlayer's turn!")
-            player_board.print()
-            computer_board.print(hide_ships=True)
+            player_board.print_board()
+            computer_board.print_board(hide_ships=True)
             x, y = make_guess(computer_board)
             result = computer_board.guess(x, y)
             print(f"Player guessed ({x}, {y}) - {result}")
@@ -176,11 +176,11 @@ def new_game():
     print("-" * 35)
     # I add this loop for player name, alphabet only
     while True:
-        player_name = input(Fore.LIGHTGREEN_EX + "Your name Please?\n" + Style.RESET_ALL)
+        player_name = input("-Your name Please?\n")
         if player_name.isalpha():
             break
         else:
-            print("Invalid input.")
+            print("-Invalid input.")
 
     print("-" * 35)
     # code institute
