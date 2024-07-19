@@ -161,6 +161,17 @@ def new_game():
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
     print(f"-Objective: Sink all ships with in {max_shots} shots to win!")
     print("-" * 35)
+
+    while True:
+        option = input("-Type 'e' to exit 'c' to continue:").lower()
+        if option == 'e':
+            print("Goodbye")
+            return False
+        elif option == 'c':
+            break
+        else:
+            print("Invalid. Please type 'e' to exit or 'c' to continue.")    
+
     while True:
         player_name = input("-Your name Please?\n")
         if player_name.isalpha() and len(player_name) <= 10:
@@ -175,14 +186,14 @@ def new_game():
     populate_board(player_board)
 
     play_game(player_board, computer_board, max_shots)
+    return True # I add true to continue the game loop
 
 
 def main():
     """
     Main function to control the game loop
     """
-    while True:
-        new_game()
+    while new_game():
         while True:
             play_again = input("Do you want to play again? (y / n): ").lower()
             if play_again in ["y", "n"]:
