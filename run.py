@@ -149,7 +149,7 @@ def new_game():
     """
     size = 5
     num_ships = 5
-    max_shots = 20
+    max_shots = 15
     scores['computer'] = 0
     scores['player'] = 0
 
@@ -184,7 +184,7 @@ def main():
     while True:
         new_game()
         while True:
-            play_again = input("Do you want to play again? (y / n): ").strip().lower()
+            play_again = input("Do you want to play again? (y / n): ").lower()
             if play_again in ["y", "n"]:
                 break
             print("Invalid input. Please type 'y' to play again or 'n' to exit.")
