@@ -36,7 +36,7 @@
     - git clone <https://github.com/SamGree/Battleships>   
 
 2. Install the required packages:
-    - pip3 frezze --local > requirements.txt
+    - pip3 freeze  -- local > requirements.txt
     
     
 
