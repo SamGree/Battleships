@@ -1,5 +1,6 @@
 from random import randint
 from colorama import Fore, Style, init
+import os
 
 # Initialize colorama
 init(autoreset=True)
@@ -8,9 +9,6 @@ init(autoreset=True)
 scores = {'computer': 0, 'player': 0}
 
 class Board:
-    """
-    A class to represent a board in a game
-    """
     def __init__(self, size, num_ships, name, type):
         self.size = size
         self.board = [[" " for _ in range(size)] for _ in range(size)]
@@ -50,36 +48,20 @@ class Board:
             if self.type == "player":
                 self.board[x][y] = "~"
 
-
 def random_point(size):
-    """
-    Returns a random point on the board between 0 and size
-    """
     return randint(0, size - 1)
 
-
 def valid_coordinates(x, y, size):
-    """
-    Check if the given coordinates are within the board limits
-    """
     return 0 <= x < size and 0 <= y < size
 
-
 def populate_board(board):
-    """
-    Populate the board with ships at random locations
-    """
     while len(board.ships) < board.num_ships:
         x = random_point(board.size)
         y = random_point(board.size)
         if (x, y) not in board.ships:
             board.add_ship(x, y)
 
-
 def make_guess(board):
-    """
-    Make a guess for the player, ensuring it's a valid and new guess
-    """
     while True:
         try:
             x = int(input("Guess Row: "))
@@ -93,11 +75,7 @@ def make_guess(board):
         except ValueError:
             print("Invalid input. Please enter numbers only 0 to 4.")
 
-
 def play_game(player_board, computer_board, max_shots):
-    """
-    Main game loop for playing the game
-    """
     print("Let's start the game!")
     turn = "player"
     player_shots = 0
@@ -105,9 +83,10 @@ def play_game(player_board, computer_board, max_shots):
 
     while player_shots < max_shots and computer_shots < max_shots:
         if turn == "player":
+            clear_screen()
             print("\nPlayer's turn!")
-            player_board.print_board() # update
-            computer_board.print_board(hide_ships=True) # update
+            computer_board.print_board(hide_ships=True)
+            print(f"Player has {max_shots - player_shots} shots left.")
             x, y = make_guess(computer_board)
             result = computer_board.guess(x, y)
             print(f"Player guessed ({x}, {y}) - {result}")
@@ -141,15 +120,13 @@ def play_game(player_board, computer_board, max_shots):
         print(f"Player: {scores['player']}")
         print(f"Computer: {scores['computer']}")
 
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
 
 def new_game():
-    """
-    Start a new game, set the board size and number of ships,
-    reset the scores, and initialize the boards.
-    """
     size = 5
     num_ships = 5
-    max_shots = 15
+    max_shots = 12
     scores['computer'] = 0
     scores['player'] = 0
 
@@ -159,7 +136,7 @@ def new_game():
     print("-Game Setup: Board size is 5x5 with 5 ships.")
     print("-Coordinates: Top left corner is at (0, 0).")
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
-    print(f"-Objective: Sink all ships with in {max_shots} shots to win!")
+    print(f"-Objective: Sink all ships within {max_shots} shots to win!")
     print("-" * 35)
 
     while True:
@@ -186,13 +163,9 @@ def new_game():
     populate_board(player_board)
 
     play_game(player_board, computer_board, max_shots)
-    return True # I add true to continue the game loop
-
+    return True
 
 def main():
-    """
-    Main function to control the game loop
-    """
     while new_game():
         while True:
             play_again = input("Do you want to play again? (y / n): ").lower()
@@ -202,6 +175,7 @@ def main():
         if play_again == "n":
             print("Thanks for playing! Goodbye.")
             break
+        clear_screen()
 
 if __name__ == "__main__":
     main()
