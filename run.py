@@ -173,7 +173,7 @@ def main():
                 break
             print("Invalid input. Please type 'y' to play again or 'n' to exit.")
         if play_again == "n":
-            print("Thanks for playing! Goodbye.")
+            print("Thank you for playing! Goodbye.")
             break
         clear_screen()
 
