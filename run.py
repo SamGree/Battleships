@@ -120,6 +120,14 @@ def play_game(player_board, computer_board, max_shots):
         print(f"Player: {scores['player']}")
         print(f"Computer: {scores['computer']}")
 
+        if scores['player'] > scores['computer']:
+            print(f"Congratulations {player_board.name}! You won with a score of {scores['player']} to {scores['computer']}.")
+        elif scores['computer'] > scores['player']:
+            print(f"Computer wins with a score of {scores['computer']} to {scores['player']}. Better luck next time, {player_board.name}!")
+        else:
+            print("It's a tie!")
+
+
 def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
