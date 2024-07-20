@@ -4,7 +4,7 @@
   > - Link to the battleships game 
   > <https://battleships-sam-f594730cad42.herokuapp.com/>
 
-  - ![Tux, the Linux mascot](/readme.images/ami.responsive.ships.png) 
+  - ![Tux, the Linux mascot](/readme.images/ami.responsive.battleship.png) 
   
 
 ## **Table of Contents**
@@ -41,7 +41,7 @@
     
 
 ## **Usage** 
-    - To start the game, just type your name.
+    - You have to type - c -to continue then type player name to start the game, or - e - to exit.
   
 ## **Game Rules**
   - Board Size: The game is played on a 5x5 grid.
@@ -69,7 +69,7 @@
 > - **ships:** List of ship locations.
 >### Methods
 > - __init__: Initializes the board with the given size and number of ships.
-> - **print:** Prints the board to the termenal.
+> - **print_board:** Prints the board to the termenal.
 > - **guess:** Handles a guess made on the board.
 > - **add_ship:** Adds a ship to the board.
  
@@ -91,36 +91,29 @@
 - ![Tux, the Linux mascot](/readme.images/flowchart.png)
 
 > ## **How to play**
-> - In this game you manually type your name to start the game. then board grids will be displayed for both first Computer grid then second player grid. Row will be first to write between 0  to 4, then col will appear this also 0 to 4 .
-> - ![Tux, the Linux mascot](/readme.images/type.name.png)
-> - ![Tux, the Linux mascot](/readme.images/player.board.png)
-> - ![Tux, the Linux mascot](/readme.images/computer.borad.png)
+> - Follow the instructions on-screen to start the game. then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
+> - ![Tux, the Linux mascot](/readme.images/computer.board.png)
 ---
-- ( ~ ) This symbol is your ships which computer locate them automatically.
+
 - ( X )  in blue its mean you miss.
 - ( * ) in red its mean you hit the target.
-- ![Tux, the Linux mascot](/readme.images/miss.hit.png)
----
----
+- ![Tux, the Linux mascot](/readme.images/redhit.bluemiss.png)
+
+
 - If the player enters a letter instead of a number, an error message will be displayed.
-- ![Tux, the Linux mascot](/readme.images/string.enter.png)
----
+- ![Tux, the Linux mascot](/readme.images/enter.no.only.png)
 ---
 - If the player enters a number outside the valid range or repeats a previously guessed number, an error message will be displayed.
-- ![Tux, the Linux mascot](/readme.images/repeated.guess.png)
-- ![Tux, the Linux mascot](/readme.images/number.outof.range.png)
+- ![Tux, the Linux mascot](/readme.images/repeat.guess.png)
+
 ---
+- 12 shots and not sink all ships, game will end, The winner is the one got high scores
+- ![Tux, the Linux mascot](/readme.images/reachmax.shot.png)
+--- 
+> - if scores will be equal for both player and computer the message will - It's a tie! -
 ---
-- If player make 12 shots and not sink all ships, game will end.
-- ![Tux, the Linux mascot](/readme.images/max.shots.png)
-> - If player won the game.
-> ![Tux, the Linux mascot](/readme.images/player.won.png)
----
-> - if computer won the game. 
-> ![Tux, the Linux mascot](/readme.images/computer.won.png)
----
-- if you want to start the game again, simply press RUN PROGRAM.
-- ![Tux, the Linux mascot](/readme.images/run,program.png)
+- if you want to start the game again, enter y to start or n to end the game .
+- ![Tux, the Linux mascot](/readme.images/play.again.png)
 
 ## Deployment
  -  Deploy this project to Heroku, I did the following steps
@@ -147,8 +140,8 @@
 > ![Tux, the Linux mascot](/readme.images/pep8.png)
 
 ## Credits
- - This video help me to understand basic python <https://www.youtube.com/watch?v=XKHEtdqhLK8>
- - The main structure of this game coming from code institute including the codes.<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>
+ - This video help me to understand basic of python <https://www.youtube.com/watch?v=XKHEtdqhLK8>
+ - The main structure of this game coming from code institute including the codes but I have change or add some of the codes you will find comment next to the code.<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>
 
  
 

@@ -121,9 +121,9 @@ def play_game(player_board, computer_board, max_shots):
         print(f"Computer scores: {scores['computer']}")
 
         if scores['player'] > scores['computer']:
-            print(f"Congratulations {player_board.name}! You won with a scores of {scores['player']} to {scores['computer']}.")
+            print(f"Congratulations {player_board.name}! You won!")
         elif scores['computer'] > scores['player']:
-            print(f"Computer wins with a scores of {scores['computer']} to {scores['player']}. Better luck next time, {player_board.name}!")
+            print(f"Computer wins! Better luck next time, {player_board.name}!")
         else:
             print("It's a tie!")
 
