@@ -1,7 +1,6 @@
-from random import randint
+random import randint
 from colorama import Fore, Style, init
 import os
-
 
 # Initialize colorama
 init(autoreset=True)
@@ -96,7 +95,6 @@ def play_game(player_board, computer_board, max_shots):
             player_shots += 1
             turn = "computer"
         else:
-            clear_screen()  # Clear the screen before computer's turn
             print("\nComputer's turn!")
             while True:
                 x = random_point(player_board.size)
@@ -139,9 +137,8 @@ def new_game():
     max_shots = 12
     scores['computer'] = 0
     scores['player'] = 0
-    
-    clear_screen()
-    print(Fore.YELLOW + "-Instructions" + Style.RESET_ALL)
+
+    print(Fore.YELLOW + "-Instructions." + Style.RESET_ALL)
     print("-" * 35)
     print(Fore.LIGHTGREEN_EX + "-Welcome to Battleships: Player vs Computer!" + Style.RESET_ALL)
     print("-Game Setup: Board size is 5x5 with 5 ships.")
@@ -190,3 +187,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
