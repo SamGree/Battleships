@@ -1,7 +1,7 @@
 from random import randint
 from colorama import Fore, Style, init
 import os
-import time
+
 
 # Initialize colorama
 init(autoreset=True)
@@ -96,7 +96,6 @@ def play_game(player_board, computer_board, max_shots):
             player_shots += 1
             turn = "computer"
         else:
-            clear_screen()
             print("\nComputer's turn!")
             while True:
                 x = random_point(player_board.size)
