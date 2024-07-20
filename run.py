@@ -83,8 +83,8 @@ def play_game(player_board, computer_board, max_shots):
 
     while player_shots < max_shots and computer_shots < max_shots:
         if turn == "player":
-            print("\n Your turn!")
             clear_screen()
+            print("\n Your turn!")
             computer_board.print_board(hide_ships=True)
             print(f"You have {max_shots - player_shots} shots left.")
             x, y = make_guess(computer_board)
@@ -95,6 +95,7 @@ def play_game(player_board, computer_board, max_shots):
             player_shots += 1
             turn = "computer"
         else:
+            clear_screen()
             print("\nComputer's turn!")
             while True:
                 x = random_point(player_board.size)
