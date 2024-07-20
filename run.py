@@ -1,4 +1,4 @@
-random import randint
+from random import randint
 from colorama import Fore, Style, init
 import os
 
