@@ -84,12 +84,12 @@ def play_game(player_board, computer_board, max_shots):
     while player_shots < max_shots and computer_shots < max_shots:
         if turn == "player":
             clear_screen()
-            print("\nPlayer's turn!")
+            print("\n Your turn!")
             computer_board.print_board(hide_ships=True)
-            print(f"Player has {max_shots - player_shots} shots left.")
+            print(f"You have {max_shots - player_shots} shots left.")
             x, y = make_guess(computer_board)
             result = computer_board.guess(x, y)
-            print(f"Player guessed ({x}, {y}) - {result}")
+            print(f"You guessed ({x}, {y}) - {result}")
             if result == "Hit":
                 scores['player'] += 1
             player_shots += 1
@@ -117,13 +117,13 @@ def play_game(player_board, computer_board, max_shots):
     if player_shots >= max_shots or computer_shots >= max_shots:
         print("Game over! Maximum number of shots reached.")
         print("\nFinal scores:")
-        print(f"Player: {scores['player']}")
-        print(f"Computer: {scores['computer']}")
+        print(f"Your scores: {scores['player']}")
+        print(f"Computer scores: {scores['computer']}")
 
         if scores['player'] > scores['computer']:
-            print(f"Congratulations {player_board.name}! You won with a score of {scores['player']} to {scores['computer']}.")
+            print(f"Congratulations {player_board.name}! You won with a scores of {scores['player']} to {scores['computer']}.")
         elif scores['computer'] > scores['player']:
-            print(f"Computer wins with a score of {scores['computer']} to {scores['player']}. Better luck next time, {player_board.name}!")
+            print(f"Computer wins with a scores of {scores['computer']} to {scores['player']}. Better luck next time, {player_board.name}!")
         else:
             print("It's a tie!")
 
@@ -138,7 +138,7 @@ def new_game():
     scores['computer'] = 0
     scores['player'] = 0
 
-    print(Fore.BLUE + "-Instructions." + Style.RESET_ALL)
+    print(Fore.YELLOW + "-Instructions." + Style.RESET_ALL)
     print("-" * 35)
     print(Fore.LIGHTGREEN_EX + "-Welcome to Battleships: Player vs Computer!" + Style.RESET_ALL)
     print("-Game Setup: Board size is 5x5 with 5 ships.")
@@ -148,7 +148,7 @@ def new_game():
     print("-" * 35)
 
     while True:
-        option = input("-Type 'e' to exit 'c' to continue:").lower()
+        option = input("-Type 'e' to exit 'c' to continue: ").lower()
         if option == 'e':
             print("Goodbye")
             return False
@@ -158,7 +158,7 @@ def new_game():
             print("Invalid. Please type 'e' to exit or 'c' to continue.")    
 
     while True:
-        player_name = input("-Your name Please?\n")
+        player_name = input("-Your name Please?\n ")
         if player_name.isalpha() and len(player_name) <= 10:
             break
         else:
