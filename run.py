@@ -1,6 +1,7 @@
 from random import randint
 from colorama import Fore, Style, init
 import os
+import time
 
 # Initialize colorama
 init(autoreset=True)
@@ -114,6 +115,8 @@ def play_game(player_board, computer_board, max_shots):
         elif scores['computer'] == player_board.num_ships:
             print("Oh no! The computer has won the game!")
             break
+        # Pause to ensure messages are seen before clearing the screen
+        input("Press Enter to continue...")
 
     if player_shots >= max_shots or computer_shots >= max_shots:
         print("Game over! Maximum number of shots reached.")
@@ -138,6 +141,8 @@ def new_game():
     max_shots = 12
     scores['computer'] = 0
     scores['player'] = 0
+    
+    clear_screen()  # Clear the screen at the beginning of the new game
 
     print(Fore.YELLOW + "-Instructions." + Style.RESET_ALL)
     print("-" * 35)
