@@ -12,11 +12,8 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Game Rules](#game-rules)
-- [Design Components](#design-components)
-- [Class: Board](#class-board)
-- [Functions for Game Logic](#functions-for-game-logic)
-- [Flowchart](#flowchart)
 - [How to play](#how-to-play)
+- [Design](#design)
 - [Testing](#testing)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
@@ -48,53 +45,13 @@
   - Ships: Each player has 5 ships.
   - Shots: Enter the row and column to make a shot (coordinates between 0 and 4).
   - Winning: Sink all the opponent's ships within 12 shots to win the game.
-   - ![Tux, the Linux mascot](/readme.images/run.program.png)
-
-## **Design Components**
- 
-  1. Class: Board. 
-  2. Functions for Game Logic.
-  3. Main Game Loop.
-  4. User Interface.
-
-> ## **Class: Board**  
-> - The Board class represents the game board for each player.
-> ### Attributes
-> - **size:** Size of the board (e.g., 5x5)
-> - **board:** A 2D list representing the board grid.
-> - **num_ships:** Number of ships on the board.
-> - **name:** Name of the board owner (e.g., "Player" or "Computer").
-> - **type:** Type of the board owner (e.g., "player" or "computer").
-> - **guesses:** List of guesses made.
-> - **ships:** List of ship locations.
->### Methods
-> - __init__: Initializes the board with the given size and number of ships.
-> - **print_board:** Prints the board to the termenal.
-> - **guess:** Handles a guess made on the board.
-> - **add_ship:** Adds a ship to the board.
- 
-> ## **Functions for Game Logic**
->  - random_point(size): Returns a random point on the board.
->  - valid_coordinates(x, y, size): Checks if the given coordinates are within the board limits.
-> - populate_board(board): Populates the board with ships at random locations.
->  - make_guess(board): Prompts the player to make a guess, ensuring it's valid and new.
-> - play_game(player_board, computer_board, max_shots): Main game loop for playing the game.
-> - new_game(): Starts a new game, setting up the boards and initializing scores.
-> ### Main Game Loop
-> - The main game loop will handle the turns between the player and the computer, updating the game state after each guess. It will continue until one player sinks all the opponent's ships or the maximum number of shots is reached.
-
-> ## **User Interface.**
-> - The user interface will be text-based, using print statements to display the game state and prompts for player input. The colorama library can be used to enhance the display with colors.
-> - ![Tux, the Linux mascot](/readme.images/requirements.png)
-
-## **Flowchart**
-- ![Tux, the Linux mascot](/readme.images/flowchart.png)
+  - Type ( e ) to exit or ( c ) to start the game.
+  > - ![Tux, the Linux mascot](/readme.images/run.program.png)
 
 > ## **How to play**
 > - Follow the instructions on-screen to start the game. then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
 > - ![Tux, the Linux mascot](/readme.images/computer.board.png)
 ---
-
 - ( X )  in blue its mean you miss.
 - ( * ) in red its mean you hit the target.
 - ![Tux, the Linux mascot](/readme.images/redhit.bluemiss.png)
@@ -105,6 +62,7 @@
 ---
 - If the player enters a number outside the valid range or repeats a previously guessed number, an error message will be displayed.
 - ![Tux, the Linux mascot](/readme.images/repeat.guess.png)
+- ![Tux, the Linux mascot](/readme.images/out.of.range.png)
 
 ---
 - 12 shots and not sink all ships, game will end, The winner is the one got high scores
@@ -114,6 +72,15 @@
 ---
 - if you want to start the game again, enter y to start or n to end the game .
 - ![Tux, the Linux mascot](/readme.images/play.again.png)
+
+> ## **User Interface.**
+> - The user interface will be text-based, using print statements to display the game state and prompts for player input. The colorama library can be used to enhance the display with colors.
+> - ![Tux, the Linux mascot](/readme.images/requirements.png)
+
+## **Design**
+#### **Flowchart**
+- ![Tux, the Linux mascot](/readme.images/flowchart.png)
+
 
 ## Deployment
  -  Deploy this project to Heroku, I did the following steps
@@ -138,6 +105,7 @@
 > ### Testing
 > - All of the code within this program was tested using Code Institute's PEP8.
 > ![Tux, the Linux mascot](/readme.images/pep8.png)
+> ![Tux, the Linux mascot](/readme.images/pep8.secondpng.png)
 
 ## Credits
  - This video help me to understand basic of python <https://www.youtube.com/watch?v=XKHEtdqhLK8>
