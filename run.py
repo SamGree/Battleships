@@ -1,8 +1,7 @@
-import os
 import platform
+import os
 from random import randint
 from colorama import Fore, Style, init
-
 
 # Initialize colorama
 init(autoreset=True)
