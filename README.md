@@ -79,7 +79,9 @@
 
 ## **Design**
 #### **Flowchart**
-- ![Tux, the Linux mascot](/readme.images/flowchart.png)
+- ![Tux, the Linux mascot](/readme.images/flowchart1.png)
+## **import**
+- os: used for adding a clear() function
 
 
 ## Deployment
@@ -106,6 +108,14 @@
 > - All of the code within this program was tested using Code Institute's PEP8.
 > ![Tux, the Linux mascot](/readme.images/pep8.png)
 > ![Tux, the Linux mascot](/readme.images/pep8.secondpng.png)
+
+> ## Bugs
+ - Resolved Bugs
+     - I missed i missed capitalize the first letter.
+     - ![Tux, the Linux mascot](/readme.images/s.should.be.capital.png)
+     - I found extra dot at the end of input option.
+     - ![Tux, the Linux mascot](/readme.images/bug.extra.png)
+
 
 ## Credits
  - This video help me to understand basic of python <https://www.youtube.com/watch?v=XKHEtdqhLK8>
