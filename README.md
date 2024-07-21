@@ -107,16 +107,18 @@
 > ### Testing
 > - All of the code within this program was tested using Code Institute's PEP8.
 > ![Tux, the Linux mascot](/readme.images/pep8.png)
-> ![Tux, the Linux mascot](/readme.images/pep8.secondpng.png)
+> ![Tux, the Linux mascot](/readme.images/pep8.second.png)
 
 > ## Bugs
  - Resolved Bugs
-     - I missed i missed capitalize the first letter.
+     - I missed i missed capitalize the first letter.It solved
      - ![Tux, the Linux mascot](/readme.images/s.should.be.capital.png)
-     - I found extra dot at the end of input option.
+     - I found extra dot at the end of input option. It solved
      - ![Tux, the Linux mascot](/readme.images/bug.extra.png)
-     - AttributeError: "str" object has no attribute "name".Ensure that the class is defined correctly and the name attribute is properly assigned in the __init__ method.
+     - AttributeError: "str" object has no attribute "name".Ensure that the class is defined correctly and the name attribute is properly assigned in the __init__ method. it solved
      - ![Tux, the Linux mascot](/readme.images/bugs.python.png)
+     - name: error "randint" is not defined, solved by typing correct name.  
+     - ![Tux, the Linux mascot](/readme.images/bug.randint.png)
 
 
 ## Credits

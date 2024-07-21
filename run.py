@@ -130,8 +130,13 @@ def play_game(player_board, computer_board, max_shots):
 
 
 def clear_screen():
-    os.system('clear')
-    return
+        if platform.system() == "Windows":
+           os.system('cls')
+        elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
+           os.system('clear')
+        else:
+        # For other systems (including web-based environments like Heroku)
+            print("\n" * 100) 
 
 def new_game():
     size = 5
