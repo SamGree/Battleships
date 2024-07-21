@@ -111,19 +111,30 @@
 
 > ## Bugs
  - Resolved Bugs
-     - I missed i missed capitalize the first letter.It solved
+  - I missed i missed capitalize the first letter.It solved
+
      - ![Tux, the Linux mascot](/readme.images/s.should.be.capital.png)
-     - I found extra dot at the end of input option. It solved
+  - I found extra dot at the end of input option. It solved.
+
      - ![Tux, the Linux mascot](/readme.images/bug.extra.png)
-     - AttributeError: "str" object has no attribute "name".Ensure that the class is defined correctly and the name attribute is properly assigned in the __init__ method. it solved
+- AttributeError: "str" object has no attribute "name".Ensure 
+  that the class is defined correctly and the name attribute is properly assigned in the __init__ method. it solved.
+
      - ![Tux, the Linux mascot](/readme.images/bugs.python.png)
-     - name: error "randint" is not defined, solved by typing correct name.  
+- name: error "randint" is not defined, solved by typing correct name.  
      - ![Tux, the Linux mascot](/readme.images/bug.randint.png)
+
+- This error appear when I forgot to import the platform statements in the top of the file. It solved.
+     - ![Tux, the Linux mascot](/readme.images/platform.forgot.png)
+
 
 
 ## Credits
  - This video help me to understand basic of python <https://www.youtube.com/watch?v=XKHEtdqhLK8>
  - The main structure of this game coming from code institute including the codes but I have change or add some of the codes you will find comment next to the code.<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>
+ - Those two websites gave me ideas on how to create rows and columns.
+ - <https://teamtreehouse.com/community/dont-know-how-to-start-python-project-2-battleship>
+ - <https://stackoverflow.com/questions/53446425/creating-a-row-of-numbers-letters-in-my-python-battleship-game>
 
  
 
