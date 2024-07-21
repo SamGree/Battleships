@@ -131,6 +131,7 @@ def play_game(player_board, computer_board, max_shots):
 
 def clear_screen():
     os.system('clear')
+    return
 
 def new_game():
     size = 5

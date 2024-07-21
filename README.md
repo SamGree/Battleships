@@ -115,6 +115,8 @@
      - ![Tux, the Linux mascot](/readme.images/s.should.be.capital.png)
      - I found extra dot at the end of input option.
      - ![Tux, the Linux mascot](/readme.images/bug.extra.png)
+     - AttributeError: "str" object has no attribute "name".Ensure that the class is defined correctly and the name attribute is properly assigned in the __init__ method.
+     - ![Tux, the Linux mascot](/readme.images/bugs.python.png)
 
 
 ## Credits
