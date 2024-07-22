@@ -224,8 +224,8 @@ def main():
             print("Invalid input. Please type 'y' to play again or 'n' to exit.")
         if play_again == "n":
             print("Thank you for playing! Goodbye.")
+            clear_screen()
             break
-        clear_screen()
 
 if __name__ == "__main__":
     main()
