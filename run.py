@@ -113,8 +113,8 @@ def play_game(player_board, computer_board, max_shots):
     clear_screen()
 
     while player_shots < max_shots and computer_shots < max_shots:
+        clear_screen()
         if turn == "player":
-            clear_screen()
             print("\n Your turn!")
             computer_board.print_board(hide_ships=True)
             print(f"You have {max_shots - player_shots} shots left.")
