@@ -95,7 +95,7 @@
 - **Random Choice:** Computer moves are randomized using random_point() for unpredictable gameplay.
 - **Text-Based Interface:** Simple implementation with colorama for color enhancements.
 #### **Flowchart**
-- ![Tux, the Linux mascot](/readme.images/flowchart1.png)
+- ![Tux, the Linux mascot](/readme.images/flowchart2.png)
 ## **import**
 - os: used for adding a clear() function
 - import platform: used to perform OS-specific tasks, such as clearing the console screen.
