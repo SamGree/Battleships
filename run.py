@@ -110,7 +110,6 @@ def play_game(player_board, computer_board, max_shots):
     turn = "player"
     player_shots = 0
     computer_shots = 0
-    clear_screen()
 
     while player_shots < max_shots and computer_shots < max_shots:
         if turn == "player":
@@ -157,8 +156,6 @@ def play_game(player_board, computer_board, max_shots):
             print(f"Computer wins! Better luck next time, {player_board.name}!")
         else:
             print("It's a tie!")
-            clear_screen()
-
 
 def clear_screen():
     # Clear the terminal screen based on the operating system
