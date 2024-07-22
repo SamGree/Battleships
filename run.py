@@ -133,7 +133,6 @@ def play_game(player_board, computer_board, max_shots):
                 y = random_point(player_board.size)
                 if (x, y) not in player_board.guesses:
                     break
-                clear_screen()
             result = player_board.guess(x, y)
             print(f"Computer guessed ({x}, {y}) - {result}")
             if result == "Hit":
