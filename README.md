@@ -54,7 +54,7 @@
   - Shots: Enter the row and column to make a shot (coordinates between 0 and 4).
   - Winning: Sink all the opponent's ships within 12 shots to win the game.
   - Type ( e ) to exit or ( c ) to start the game.
-  - As a player, your name must be **10 characters or fewer** to start the game.
+  - As a player to enter your name to start the game: your input must be ***10 characters or fewer*** .
   > - ![Tux, the Linux mascot](/readme.images/new.instruction.png)
 
 > ## How to play
@@ -159,6 +159,8 @@
 - Indentation errors - Received indentation errors e.g "line code too long, over-indented and trailing whitespace" Fixed the indentation by ensuring all code lines in the functions were correctly aligned.
      - ![Tux, the Linux mascot](/readme.images/indentation.png)   
 - **Unsolved Bugs**
+- Since the list has a greater height than the terminal window in Heroku, part of the list remains even after the window has been cleared. This behavior is not found when the application is run in, e.g., GitPod workspaces.
+- ![Tux, the Linux mascot](/readme.images/twice.turn.png)
 
 
 ## Credits  
