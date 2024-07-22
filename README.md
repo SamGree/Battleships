@@ -4,7 +4,7 @@
   > - Link to the battleships game 
   > <https://battleships-sam-f594730cad42.herokuapp.com/>
 
-  - ![Tux, the Linux mascot](/readme.images/ami.responsive.battleship.png) 
+  - ![Tux, the Linux mascot](/readme.images/ami.responsive.png) 
   
 
 ## **Table of Contents**
@@ -71,7 +71,7 @@
 > - if scores will be equal for both player and computer the message will - It's a tie! -
 ---
 - if you want to start the game again, enter y to start or n to end the game .
-- ![Tux, the Linux mascot](/readme.images/play.again.png)
+- ![Tux, the Linux mascot](/readme.images/better.luck1.png)
 
 > ## **User Interface.**
 > - When you start the game by running python run.py, you will see a welcome message and instructions about the game setup, including board size, ship count, and shooting rules.

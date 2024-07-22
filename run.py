@@ -104,8 +104,7 @@ def make_guess(board):
             else:
                 print("Invalid or repeated guess. Try again.")
         except ValueError:
-            print("Invalid input. Please enter numbers only 0 to 4.")    
-                  
+            print("Invalid input. Please enter numbers only 0 to 4.")
 
 
 def play_game(player_board, computer_board, max_shots):
@@ -171,7 +170,7 @@ def clear_screen():
     if platform.system() == "Windows":
         os.system('cls')
     elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
-           os.system('clear')
+        os.system('clear')
     else:
         print("\n" * 100)
 
@@ -215,7 +214,6 @@ def new_game():
             break
         else:
             print("-Invalid input.")
-            
 
     print("-" * 35)
     computer_board = Board(size, num_ships, "Computer", type="computer")
