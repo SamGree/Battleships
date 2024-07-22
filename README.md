@@ -54,6 +54,7 @@
   - Shots: Enter the row and column to make a shot (coordinates between 0 and 4).
   - Winning: Sink all the opponent's ships within 12 shots to win the game.
   - Type ( e ) to exit or ( c ) to start the game.
+  - As a player, your name must be **10 characters or fewer** to start the game.
   > - ![Tux, the Linux mascot](/readme.images/new.instruction.png)
 
 > ## How to play
