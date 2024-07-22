@@ -46,7 +46,7 @@
   - Shots: Enter the row and column to make a shot (coordinates between 0 and 4).
   - Winning: Sink all the opponent's ships within 12 shots to win the game.
   - Type ( e ) to exit or ( c ) to start the game.
-  > - ![Tux, the Linux mascot](/readme.images/run.program.png)
+  > - ![Tux, the Linux mascot](/readme.images/new.instruction.png)
 
 > ## **How to play**
 > - Follow the instructions on-screen to start the game. then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
@@ -148,6 +148,8 @@
 
 - This error appear when I forgot to import the platform in the top of the file. It solved.
      - ![Tux, the Linux mascot](/readme.images/platform.forgot.png)
+- Indentation errors - Received indentation errors e.g "line code too long, over-indented and trailing whitespace" Fixed the indentation by ensuring all code lines in the functions were correctly aligned.
+     - ![Tux, the Linux mascot](/readme.images/indentation.png)   
 
 
 
