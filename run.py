@@ -10,6 +10,13 @@ init(autoreset=True)
 scores = {'computer': 0, 'player': 0}
 
 class Board:
+    """
+    Sets board size, the number of the ships,
+    player name and the board type(for computer and player).
+    It includes methods for adding ships and guesses and ptinting
+    the board
+    """
+
     def __init__(self, size, num_ships, name, type):
         self.size = size
         self.board = [[" " for _ in range(size)] for _ in range(size)]
@@ -20,6 +27,10 @@ class Board:
         self.ships = []
 
     def print_board(self, hide_ships=False):
+        """
+        Prints the game board, optionally hiding ship
+        locations based on the `hide_ships` flag.
+        """
         print(f"{self.name}'s Board:")
         print("   " + "   ".join(str(i) for i in range(self.size)))
         for idx, row in enumerate(self.board):
@@ -33,6 +44,10 @@ class Board:
         print("  " + "---|" * self.size)
 
     def guess(self, x, y):
+        """
+        Processes a guess on the board, marking hits or misses,
+        and cant adds more ship to the board.
+        """
         self.guesses.append((x, y))
         if (x, y) in self.ships:
             self.board[x][y] = Fore.LIGHTRED_EX + '*' + Style.RESET_ALL
@@ -50,12 +65,21 @@ class Board:
                 self.board[x][y] = "~"
 
 def random_point(size):
+    """
+    Helper function to return a random integer between 0 and size
+    """
     return randint(0, size - 1)
 
 def valid_coordinates(x, y, size):
+    """
+    Check if coordinates (x, y) are within the bounds of a size x size grid
+    """
     return 0 <= x < size and 0 <= y < size
 
 def populate_board(board):
+    """
+    Place ships on the board until the total number of ships is met
+    """
     while len(board.ships) < board.num_ships:
         x = random_point(board.size)
         y = random_point(board.size)
@@ -77,6 +101,11 @@ def make_guess(board):
             print("Invalid input. Please enter numbers only 0 to 4.")
 
 def play_game(player_board, computer_board, max_shots):
+    """
+    Manages the main game loop, alternating turns between
+    the player and the computer,and tracks the number of shots
+    each can take until the maximum number of shots is reached.
+    """
     print("Let's start the game!")
     turn = "player"
     player_shots = 0
@@ -130,22 +159,28 @@ def play_game(player_board, computer_board, max_shots):
 
 
 def clear_screen():
+    # Clear the terminal screen based on the operating system
         if platform.system() == "Windows":
            os.system('cls')
         elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
            os.system('clear')
         else:
-        # For other systems (including web-based environments like Heroku)
             print("\n" * 100) 
 
 def new_game():
+    """
+    Initializes a new game of Battleships,
+    setting up board size, number of ships,
+    maximum shots, and scores,
+    and prints game instructions to the player
+    """
     size = 5
     num_ships = 5
     max_shots = 12
     scores['computer'] = 0
     scores['player'] = 0
 
-    print(Fore.YELLOW + "-Instructions." + Style.RESET_ALL)
+    print(Fore.YELLOW + "-Instructions" + Style.RESET_ALL)
     print("-" * 35)
     print(Fore.LIGHTGREEN_EX + "-Welcome to Battleships: Player vs Computer!" + Style.RESET_ALL)
     print("-Game Setup: Board size is 5x5 with 5 ships.")
