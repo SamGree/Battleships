@@ -124,6 +124,7 @@ def play_game(player_board, computer_board, max_shots):
                 scores['player'] += 1
             player_shots += 1
             turn = "computer"
+            clear_screen()
         else:
             print("\nComputer's turn!")
             while True:
