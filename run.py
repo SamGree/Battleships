@@ -104,8 +104,8 @@ def make_guess(board):
             else:
                 print("Invalid or repeated guess. Try again.")
         except ValueError:
-            print("Invalid input. Please enter numbers only 0 to 4.")
-            clear_screen()       
+            print("Invalid input. Please enter numbers only 0 to 4.")    
+                  
 
 
 def play_game(player_board, computer_board, max_shots):
@@ -208,7 +208,6 @@ def new_game():
             break
         else:
             print("Invalid. Please type 'e' to exit or 'c' to continue.")
-            clear_screen()
 
     while True:
         player_name = input("-Your name Please?\n ")
@@ -216,7 +215,7 @@ def new_game():
             break
         else:
             print("-Invalid input.")
-            clear_screen()
+            
 
     print("-" * 35)
     computer_board = Board(size, num_ships, "Computer", type="computer")
