@@ -62,15 +62,17 @@
 ---
 - If the player enters a number outside the valid range or repeats a previously guessed number, an error message will be displayed.
 - ![Tux, the Linux mascot](/readme.images/repeat.guess.png)
+-
 - ![Tux, the Linux mascot](/readme.images/out.of.range.png)
 
 ---
-- 12 shots and not sink all ships, game will end, The winner is the one got high scores
-- ![Tux, the Linux mascot](/readme.images/reachmax.shot.png)
+- If 12 shots and not sink all ships, game will end, The winner is the one who get the high scores
+- ![Tux, the Linux mascot](/readme.images/better.one.png)
 --- 
-> - if scores will be equal for both player and computer the message will - It's a tie! -
+> - If scores will be equal for both player and computer the message will - It's a tie!
+- ![Tux, the Linux mascot](/readme.images/its.tie.png)
 ---
-- if you want to start the game again, enter y to start or n to end the game .
+- If you want to start the game again, enter y to start or n to end the game .
 - ![Tux, the Linux mascot](/readme.images/better.luck1.png)
 
 > ## **User Interface.**
@@ -102,17 +104,18 @@
 
 
 ## Deployment
+
  - All code from Gitpod was pushed to GitHub using the following steps:
-   1. git add .
-   2. git commit -m "Commit message"
-   3. git push
+ 1. git add .
+ 2. git commit -m "Commit message"
+ 3. git push
 
  -  Deploy this project to Heroku, I did the following steps
    1. Push all codes to Github.
    2. Go to Heroku page and login.
    3. Create new app.
    4. App name (battleships) and choose Europe for region.
-   5. create app.
+   5. Create app.
    6. Click GitHub, connect to Github.
    7. Go to the settings tab.
    8.  Config vars
@@ -122,7 +125,7 @@
    12. Select Nodejs, then save changes.
    13. Ensure that Heroku/Python is at the top of the list, followed by Heroku/Nodejs
    14. Go to the deploy tab and Select github.
-   15. confirm what I want to connect to github.
+   15. Confirm what I want to connect to github.
    16. Now we can search for github repository name. 
   and  Scroll down to Manual Deploy and select deploy branch finally click connect.
 
@@ -139,11 +142,10 @@
   - I found extra dot at the end of the input option. It solved.
 
      - ![Tux, the Linux mascot](/readme.images/bug.extra.png)
-- AttributeError: "str" object has no attribute "name".Then I ensure 
-  that the class is defined correctly and the name attribute is properly assigned in the __init__ method. it solved.
+- AttributeError: "str" object has no attribute "name".Then I ensure that the class is defined correctly and the name attribute is properly assigned in the __init__ method. it solved.
 
      - ![Tux, the Linux mascot](/readme.images/bugs.python.png)
-- name: error "randint" is not defined, solved by typing correct name.  
+- Name: error "randint" is not defined, solved by typing correct name.  
      - ![Tux, the Linux mascot](/readme.images/bug.randint.png)
 
 - This error appear when I forgot to import the platform in the top of the file. It solved.
