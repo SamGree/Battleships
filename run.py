@@ -144,6 +144,7 @@ def play_game(player_board, computer_board, max_shots):
         elif scores['computer'] == player_board.num_ships:
             print("Oh no! The computer has won the game!")
             break
+            clear_screen()
 
     if player_shots >= max_shots or computer_shots >= max_shots:
         print("Game over! Maximum number of shots reached.")
@@ -157,6 +158,7 @@ def play_game(player_board, computer_board, max_shots):
             print(f"Computer wins! Better luck next time, {player_board.name}!")
         else:
             print("It's a tie!")
+            clear_screen()
 
 
 def clear_screen():
