@@ -9,6 +9,7 @@ init(autoreset=True)
 # Initialize scores for both the computer and the player
 scores = {'computer': 0, 'player': 0}
 
+
 class Board:
     """
     Sets board size, the number of the ships,
@@ -39,7 +40,8 @@ class Board:
                 row_to_print = [" " if cell == "@" else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row_to_print) + "  |")
             else:
-                row_to_print = [Fore.RED + cell + Style.RESET_ALL if cell == '*' else cell for cell in row]
+                row_to_print = [Fore.RED + cell + Style.RESET_ALL if cell ==
+                                '*' else cell for cell in row]
                 print(str(idx) + " " + "  |".join(row) + "  |")
         print("  " + "---|" * self.size)
 
@@ -64,17 +66,20 @@ class Board:
             if self.type == "player":
                 self.board[x][y] = "~"
 
+
 def random_point(size):
     """
     Helper function to return a random integer between 0 and size
     """
     return randint(0, size - 1)
 
+
 def valid_coordinates(x, y, size):
     """
     Check if coordinates (x, y) are within the bounds of a size x size grid
     """
     return 0 <= x < size and 0 <= y < size
+
 
 def populate_board(board):
     """
@@ -85,6 +90,7 @@ def populate_board(board):
         y = random_point(board.size)
         if (x, y) not in board.ships:
             board.add_ship(x, y)
+
 
 def make_guess(board):
     while True:
@@ -99,6 +105,7 @@ def make_guess(board):
                 print("Invalid or repeated guess. Try again.")
         except ValueError:
             print("Invalid input. Please enter numbers only 0 to 4.")
+
 
 def play_game(player_board, computer_board, max_shots):
     """
@@ -153,18 +160,20 @@ def play_game(player_board, computer_board, max_shots):
         if scores['player'] > scores['computer']:
             print(f"Congratulations {player_board.name}! You won!")
         elif scores['computer'] > scores['player']:
-            print(f"Computer wins! Better luck next time, {player_board.name}!")
+            print(f"Computer won! Better luck next time, {player_board.name}!")
         else:
             print("It's a tie!")
 
+
 def clear_screen():
     # Clear the terminal screen based on the operating system
-        if platform.system() == "Windows":
-           os.system('cls')
-        elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
+    if platform.system() == "Windows":
+        os.system('cls')
+    elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
            os.system('clear')
-        else:
-            print("\n" * 100) 
+    else:
+        print("\n" * 100)
+
 
 def new_game():
     """
@@ -181,7 +190,8 @@ def new_game():
 
     print(Fore.YELLOW + "-Instructions" + Style.RESET_ALL)
     print("-" * 35)
-    print(Fore.LIGHTGREEN_EX + "-Welcome to Battleships: Player vs Computer!" + Style.RESET_ALL)
+    print(Fore.GREEN + "-Welcome to Battleships!" + Style.RESET_ALL)
+    print(Fore.RED + "-Player vs Computer." + Style.RESET_ALL)
     print("-Game Setup: Board size is 5x5 with 5 ships.")
     print("-Coordinates: Top left corner is at (0, 0).")
     print("-Shooting Rules: Enter coordinates between 0 and 4.")
@@ -197,7 +207,7 @@ def new_game():
             break
         else:
             print("Invalid. Please type 'e' to exit or 'c' to continue.")
-            clear_screen() 
+            clear_screen()
 
     while True:
         player_name = input("-Your name Please?\n ")
@@ -215,7 +225,8 @@ def new_game():
 
     play_game(player_board, computer_board, max_shots)
     return True
-clear_screen()
+    clear_screen()
+
 
 def main():
     while new_game():
@@ -223,12 +234,12 @@ def main():
             play_again = input("Do you want to play again? (y / n): ").lower()
             if play_again in ["y", "n"]:
                 break
-            print("Invalid input. Please type 'y' to play again or 'n' to exit.")
+            print("Invalid input. Type 'y' to play again or 'n' to exit.")
         if play_again == "n":
             print("Thank you for playing! Goodbye.")
             break
         clear_screen()
 
+
 if __name__ == "__main__":
     main()
-    
