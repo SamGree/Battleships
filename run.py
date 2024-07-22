@@ -197,7 +197,8 @@ def new_game():
         elif option == 'c':
             break
         else:
-            print("Invalid. Please type 'e' to exit or 'c' to continue.")    
+            print("Invalid. Please type 'e' to exit or 'c' to continue.")
+            clear_screen() 
 
     while True:
         player_name = input("-Your name Please?\n ")
@@ -205,6 +206,7 @@ def new_game():
             break
         else:
             print("-Invalid input.")
+            clear_screen()
 
     print("-" * 35)
     computer_board = Board(size, num_ships, "Computer", type="computer")
@@ -214,6 +216,7 @@ def new_game():
 
     play_game(player_board, computer_board, max_shots)
     return True
+clear_screen()
 
 def main():
     while new_game():
