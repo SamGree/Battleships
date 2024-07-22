@@ -110,6 +110,7 @@ def play_game(player_board, computer_board, max_shots):
     turn = "player"
     player_shots = 0
     computer_shots = 0
+    clear_screen()
 
     while player_shots < max_shots and computer_shots < max_shots:
         if turn == "player":
