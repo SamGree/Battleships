@@ -122,7 +122,6 @@ def play_game(player_board, computer_board, max_shots):
     Manages the main game loop, alternating turns between
     the player and the computer,and tracks the number of shots
     each can take until the maximum number of shots is reached,
-    Mohammed talal who helped me and with my idea to buil this function.
     """
     print("Let's start the game!")
     turn = "player"

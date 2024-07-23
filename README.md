@@ -76,31 +76,29 @@
    ![Tux, the Linux mascot](/readme.images/new.instruction.png)
 
 > ## How to play
-> - Follow the instructions on-screen to start the game. then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
-![Tux, the Linux mascot](/readme.images/computer.board.png)
+> - Follow the instructions on-screen to start the game. Your input for name must be ***10 characters or fewer*** .Then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
+![Tux, the Linux mascot](/readme.images/enter.name.png)
 ---
 - ( X )  in blue its mean you miss.
 - ( * ) in red its mean you hit the target.
-![Tux, the Linux mascot](/readme.images/redhit.bluemiss.png)
+![Tux, the Linux mascot](/readme.images/row.col.red.png)
 
 
-- If the player enters a letter instead of a number, an error message will be displayed.
-![Tux, the Linux mascot](/readme.images/enter.no.only.png)
+- If the player enter a letter instead of a number, an error message will be displayed.
+![Tux, the Linux mascot](/readme.images/letter.insted.nu.png)
 ---
 - If the player enters a number outside the valid range or repeats a previously guessed number, an error message will be displayed.
-![Tux, the Linux mascot](/readme.images/repeat.guess.png)
-
-![Tux, the Linux mascot](/readme.images/out.of.range.png)
+![Tux, the Linux mascot](/readme.images/not.inrang.png)
 
 ---
 - If 12 shots and not sink all ships, game will end, The winner is the one who get the high scores
-![Tux, the Linux mascot](/readme.images/better.one.png)
+![Tux, the Linux mascot](/readme.images/i.won.png)
 --- 
 > - If scores will be equal for both player and computer the message will - It's a tie!
-![Tux, the Linux mascot](/readme.images/its.tie.png)
+![Tux, the Linux mascot](/readme.images/tie.last.png)
 ---
-- If you want to start the game again, enter y to start or n to end the game .
-![Tux, the Linux mascot](/readme.images/better.luck1.png)
+- If you want to start the game again, enter y to start or n to end the game . and second option in RUN PROGRAM.
+![Tux, the Linux mascot](/readme.images/two.option.png)
 
 
 
@@ -160,7 +158,8 @@
       ![Tux, the Linux mascot](/readme.images/indentation.png)   
 - **Unsolved Bugs**
 - Since the list has a greater height than the terminal window in Heroku, part of the list remains even after the window has been cleared. This behavior is not found when the application is run in, e.g., GitPod workspaces.
- ![Tux, the Linux mascot](/readme.images/twice.turn.png)
+
+- ![Tux, the Linux mascot](/readme.images/twice.turn.png)
 
 
 ## Credits  
@@ -170,7 +169,7 @@
  - <https://teamtreehouse.com/community/dont-know-how-to-start-python-project-2-battleship>
  - <https://stackoverflow.com/questions/53446425/creating-a-row-of-numbers-letters-in-my-python-battleship-game>
  - For the functions, while loop, I have used stack overflow for idea.
- - Thanks to my friend, who can do a bit of Python,(Mohammed talal). Tt was great experience to discuss how functions and loops work in python.
+ - Thanks to my friend, who can Python,(Talal Shemeri). Tt was great experience to discuss how functions and loops work in python.E-mail  **orange.2009@hotmail.com**
 
  
 
