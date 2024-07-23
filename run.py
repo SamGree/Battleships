@@ -166,7 +166,9 @@ def play_game(player_board, computer_board, max_shots):
 
 
 def clear_screen():
-    # Clear the terminal screen based on the operating system
+    """
+    Clear the terminal screen based on the operating system
+    """
     if platform.system() == "Windows":
         os.system('cls')
     elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
