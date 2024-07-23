@@ -81,7 +81,8 @@
 ---
 - ( X )  in blue its mean you miss.
 - ( * ) in red its mean you hit the target.
-![Tux, the Linux mascot](/readme.images/row.col.red.png)
+
+- ![Tux, the Linux mascot](/readme.images/row.col.red.png)
 
 
 - If the player enter a letter instead of a number, an error message will be displayed.
