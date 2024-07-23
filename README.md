@@ -165,10 +165,12 @@
 
 ## Credits  
  - The main structure of this game coming from code institute. I used **Code Institute’s** code for my Battleships project to leverage their reliable solutions and best practices. This foundation provided proven techniques and efficient problem-solving. I then integrated my own code to customize and complete the project, ensuring it met specific requirements and aligned with Python programming goals. Here is the link to that page:".<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>.
- - This video help me to understand basic of python <https://www.youtube.com/watch?v=XKHEtdqhLK8>
+ - This video help me to understand basic of python, <https://www.youtube.com/watch?v=XKHEtdqhLK8>
  - Those two websites gave me ideas on how to Building the gameboard.
  - <https://teamtreehouse.com/community/dont-know-how-to-start-python-project-2-battleship>
  - <https://stackoverflow.com/questions/53446425/creating-a-row-of-numbers-letters-in-my-python-battleship-game>
+ - For the functions, while loop, I have used stack overflow for idea.
+ - Thanks to my friend, who can do a bit of Python,(Mohammed talal). Tt was great experience to discuss how functions and loops work in python.
 
  
 
