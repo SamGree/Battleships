@@ -6,8 +6,11 @@ from colorama import Fore, Style, init
 # Initialize colorama
 init(autoreset=True)
 
-# Initialize scores for both the computer and the player
 scores = {'computer': 0, 'player': 0}
+"""
+Initialize scores for both the computer and the player
+Borrow from code institute
+"""
 
 
 class Board:
@@ -15,7 +18,7 @@ class Board:
     Sets board size, the number of the ships,
     player name and the board type(for computer and player).
     It includes methods for adding ships and guesses and ptinting
-    the board
+    the board.Borrow from code institute
     """
 
     def __init__(self, size, num_ships, name, type):
@@ -49,6 +52,8 @@ class Board:
         """
         Processes a guess on the board, marking hits or misses,
         and cant adds more ship to the board.
+        Borrow the code from code institute,
+        and I made some change like color and ship symbol.
         """
         self.guesses.append((x, y))
         if (x, y) in self.ships:
@@ -69,7 +74,8 @@ class Board:
 
 def random_point(size):
     """
-    Helper function to return a random integer between 0 and size
+    Helper function to return a random integer between 0 and size.
+    Borrow the code form institute
     """
     return randint(0, size - 1)
 
@@ -83,7 +89,7 @@ def valid_coordinates(x, y, size):
 
 def populate_board(board):
     """
-    Place ships on the board until the total number of ships is met
+    Place ships on the board until the total number of ships is met.
     """
     while len(board.ships) < board.num_ships:
         x = random_point(board.size)
@@ -93,10 +99,14 @@ def populate_board(board):
 
 
 def make_guess(board):
+    """
+    function for player input in a grid-based game,
+    ensuring that guesses are within valid bounds and not repeated.
+    """
     while True:
         try:
-            x = int(input("Guess Row: "))
-            y = int(input("Guess Col: "))
+            x = int(input(Fore.CYAN + "Guess Row: "))
+            y = int(input(Fore.MAGENTA + "Guess Col: "))
             valid_coords = valid_coordinates(x, y, board.size)
             new_guess = (x, y) not in board.guesses
             if valid_coords and new_guess:
@@ -111,7 +121,8 @@ def play_game(player_board, computer_board, max_shots):
     """
     Manages the main game loop, alternating turns between
     the player and the computer,and tracks the number of shots
-    each can take until the maximum number of shots is reached.
+    each can take until the maximum number of shots is reached,
+    Mohammed talal who helped me and with my idea to buil this function.
     """
     print("Let's start the game!")
     turn = "player"
@@ -168,6 +179,7 @@ def play_game(player_board, computer_board, max_shots):
 def clear_screen():
     """
     Clear the terminal screen based on the operating system
+    I got this code from Feruza Orifjonova(slack)
     """
     if platform.system() == "Windows":
         os.system('cls')
@@ -182,7 +194,10 @@ def new_game():
     Initializes a new game of Battleships,
     setting up board size, number of ships,
     maximum shots, and scores,
-    and prints game instructions to the player
+    and prints game instructions to the player.
+    Borrow from code institute, and add more print,
+    add color to the terminal text, making it more visually appealing.
+    And two while loop
     """
     size = 5
     num_ships = 5
@@ -229,6 +244,10 @@ def new_game():
 
 
 def main():
+    """
+    Main game loop. Repeats the game while new_game() returns True.
+    Prompts user to play again or exit. Handles invalid inputs.
+    """
     while new_game():
         while True:
             play_again = input(Fore.YELLOW +

@@ -1,89 +1,26 @@
 # *Battleships Game*
 
-  - The Battleships game is a turn-based game where the player competes against the computer. The game consists of a grid (board) where ships are placed. Players take turns guessing the locations of the opponent's ships, trying to "hit" and sink them.
+  - Creating a Battleships game was a chance to combine my love for strategy and programming. I wanted to design a game that’s simple yet engaging, where players can test their tactical skills. It’s also a fun way to practice coding and game design, making it an enjoyable project from both a technical and creative perspective. Thanks to code institute for this chance. Plus I use to play with my son when he was little.
   > - Link to the battleships game 
   > <https://battleships-sam-f594730cad42.herokuapp.com/>
 
-  - ![Tux, the Linux mascot](/readme.images/ami.responsive.png) 
+  ![Tux, the Linux mascot](/readme.images/ami.responsive.png) 
   
 
 ## **Table of Contents**
+- [Design](#design)
+- [Design Choices](#design-choices)
 - [Features](#features)
 - [Installation](#installation)
 - [User Interface](#user-interface)
 - [Usage](#usage)
 - [Game Rules](#game-rules)
 - [How To Play](#how-to-play)
-- [Design](#design)
-- [Design Choices](#design-choices)
 - [Deployment](#deployment)
 - [Testing](#testing)
 - [Bugs](#bugs)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
-
-
-
-## Features
-- Classic Battleships game: Player against the computer.
-- Board Setup: 5x5 board with 5 ships.
-- Simple and intuitive interface.
-- Color-coded feedback for hits and misses.
-
-## Installation
-
-1. Clone the repository:
-    
-    - git clone <https://github.com/SamGree/Battleships>   
-
-2. Install the required packages:
-    - pip3 freeze  -- local > requirements.txt
-    - ![Tux, the Linux mascot](/readme.images/requirements.png)
-
-> ## User Interface
-> - When you start the game by running python run.py, you will see a welcome message and instructions about the game setup, including board size, ship count, and shooting rules.
-    
-    
-
-## Usage
-    - You have to type - c -to continue then type player name to start the game, or - e - to exit.
-  
-## Game Rules
-  - Board Size: The game is played on a 5x5 grid.
-  - Ships: Each player has 5 ships.
-  - Shots: Enter the row and column to make a shot (coordinates between 0 and 4).
-  - Winning: Sink all the opponent's ships within 12 shots to win the game.
-  - Type ( e ) to exit or ( c ) to start the game.
-  - As a player to enter your name to start the game: your input must be ***10 characters or fewer*** .
-  > - ![Tux, the Linux mascot](/readme.images/new.instruction.png)
-
-> ## How to play
-> - Follow the instructions on-screen to start the game. then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
-> - ![Tux, the Linux mascot](/readme.images/computer.board.png)
----
-- ( X )  in blue its mean you miss.
-- ( * ) in red its mean you hit the target.
-- ![Tux, the Linux mascot](/readme.images/redhit.bluemiss.png)
-
-
-- If the player enters a letter instead of a number, an error message will be displayed.
-- ![Tux, the Linux mascot](/readme.images/enter.no.only.png)
----
-- If the player enters a number outside the valid range or repeats a previously guessed number, an error message will be displayed.
-- ![Tux, the Linux mascot](/readme.images/repeat.guess.png)
--
-- ![Tux, the Linux mascot](/readme.images/out.of.range.png)
-
----
-- If 12 shots and not sink all ships, game will end, The winner is the one who get the high scores
-- ![Tux, the Linux mascot](/readme.images/better.one.png)
---- 
-> - If scores will be equal for both player and computer the message will - It's a tie!
-- ![Tux, the Linux mascot](/readme.images/its.tie.png)
----
-- If you want to start the game again, enter y to start or n to end the game .
-- ![Tux, the Linux mascot](/readme.images/better.luck1.png)
-
 
 ## Design
 ### Game Board:
@@ -103,7 +40,70 @@
 - **Random Choice:** Computer moves are randomized using random_point() for unpredictable gameplay.
 - **Text-Based Interface:** Simple implementation with colorama for color enhancements.
 #### **Flowchart**
-- ![Tux, the Linux mascot](/readme.images/flowchart.final.png)
+![Tux, the Linux mascot](/readme.images/flowchart.final.png)
+
+## Features
+- Classic Battleships game: Player against the computer.
+- Board Setup: 5x5 board with 5 ships.
+- Simple and intuitive interface.
+- Color-coded feedback for hits and misses.
+
+## Installation
+
+1. Clone the repository:
+    
+    - git clone <https://github.com/SamGree/Battleships>   
+
+2. Install the required packages:
+    - pip3 freeze  -- local > requirements.txt
+     ![Tux, the Linux mascot](/readme.images/requirements.png)
+
+> ## User Interface
+> - When you start the game by running python run.py, you will see a welcome message and instructions about the game setup, including board size, ship count, and shooting rules.
+    
+    
+
+## Usage
+    - You have to type - c -to continue then type player name to start the game, or - e - to exit.
+  
+## Game Rules
+  - Board Size: The game is played on a 5x5 grid.
+  - Ships: Each player has 5 ships.
+  - Shots: Enter the row and column to make a shot (coordinates between 0 and 4).
+  - Winning: Sink all the opponent's ships within 12 shots to win the game.
+  - Type ( e ) to exit or ( c ) to start the game.
+  - As a player to enter your name to start the game: your input must be ***10 characters or fewer*** .
+   ![Tux, the Linux mascot](/readme.images/new.instruction.png)
+
+> ## How to play
+> - Follow the instructions on-screen to start the game. then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
+![Tux, the Linux mascot](/readme.images/computer.board.png)
+---
+- ( X )  in blue its mean you miss.
+- ( * ) in red its mean you hit the target.
+![Tux, the Linux mascot](/readme.images/redhit.bluemiss.png)
+
+
+- If the player enters a letter instead of a number, an error message will be displayed.
+![Tux, the Linux mascot](/readme.images/enter.no.only.png)
+---
+- If the player enters a number outside the valid range or repeats a previously guessed number, an error message will be displayed.
+![Tux, the Linux mascot](/readme.images/repeat.guess.png)
+
+![Tux, the Linux mascot](/readme.images/out.of.range.png)
+
+---
+- If 12 shots and not sink all ships, game will end, The winner is the one who get the high scores
+![Tux, the Linux mascot](/readme.images/better.one.png)
+--- 
+> - If scores will be equal for both player and computer the message will - It's a tie!
+![Tux, the Linux mascot](/readme.images/its.tie.png)
+---
+- If you want to start the game again, enter y to start or n to end the game .
+![Tux, the Linux mascot](/readme.images/better.luck1.png)
+
+
+
 ## **import**
 - os: used for adding a clear() function
 - import platform: used to perform OS-specific tasks, such as clearing the console screen.
@@ -144,23 +144,23 @@
  - **Resolved Bugs**
   - I missed capitalize (Style) in the print statement to color the header.It solved
 
-     - ![Tux, the Linux mascot](/readme.images/s.should.be.capital.png)
+     ![Tux, the Linux mascot](/readme.images/s.should.be.capital.png)
   - I found extra dot at the end of the input option. It solved.
 
-     - ![Tux, the Linux mascot](/readme.images/bug.extra.png)
+      ![Tux, the Linux mascot](/readme.images/bug.extra.png)
 - AttributeError: "str" object has no attribute "name".Then I ensure that the class is defined correctly and the name attribute is properly assigned in the __init__ method. it solved.
 
-     - ![Tux, the Linux mascot](/readme.images/bugs.python.png)
+      ![Tux, the Linux mascot](/readme.images/bugs.python.png)
 - Name: error "randint" is not defined, solved by typing correct name.  
-     - ![Tux, the Linux mascot](/readme.images/bug.randint.png)
+      ![Tux, the Linux mascot](/readme.images/bug.randint.png)
 
 - This error appear when I forgot to import the platform in the top of the file. It solved.
-     - ![Tux, the Linux mascot](/readme.images/platform.forgot.png)
+      ![Tux, the Linux mascot](/readme.images/platform.forgot.png)
 - Indentation errors - Received indentation errors e.g "line code too long, over-indented and trailing whitespace" Fixed the indentation by ensuring all code lines in the functions were correctly aligned.
-     - ![Tux, the Linux mascot](/readme.images/indentation.png)   
+      ![Tux, the Linux mascot](/readme.images/indentation.png)   
 - **Unsolved Bugs**
 - Since the list has a greater height than the terminal window in Heroku, part of the list remains even after the window has been cleared. This behavior is not found when the application is run in, e.g., GitPod workspaces.
-- ![Tux, the Linux mascot](/readme.images/twice.turn.png)
+ ![Tux, the Linux mascot](/readme.images/twice.turn.png)
 
 
 ## Credits  
