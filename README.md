@@ -1,6 +1,6 @@
 # *Battleships Game*
 
-  - Creating a Battleships game was a chance to combine my love for strategy and programming. I wanted to design a game that’s simple yet engaging, where players can test their tactical skills. It’s also a fun way to practice coding and game design, making it an enjoyable project from both a technical and creative perspective. Thanks to code institute for this chance. Plus I use to play with my son when he was little.
+  - Creating a Battleships game was a chance to combine my love for strategy and programming. I wanted to design a game that’s simple yet engaging, where players can test their tactical skills. It’s also a fun way to practice coding and game design, making it an enjoyable project from both a technical and creative perspective. Thanks to code institute for this chance. Plus I used to play Battleship game with my son when he was younger.
   > - Link to the battleships game 
   > <https://battleships-sam-f594730cad42.herokuapp.com/>
 
@@ -28,7 +28,7 @@
 - Class: Board
 - Role: Manages the board, ship placement, and guesses. Includes methods to print the board, add ships, handle guesses, and validate coordinates.
 ### Game Logic:
-- Flow: Alternates turns between the player and computer. The game ends when the shot limit is reached or all ships are sunk.
+- Flow: Alternates turns between the player and computer. The game ends when the shot limit is reached or One side sank all five ships.
 ### Key Functions:
 - new_game(): Initializes the game and shows instructions.
 - play_game(): Runs the game loop with turn-taking and scoring.
@@ -77,7 +77,8 @@
    ![Tux, the Linux mascot](/readme.images/new.instruction.png)
 
 > ## How to play
-> - Follow the instructions on-screen to start the game. Your input for name must be ***10 characters or fewer*** .Then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
+> - Follow the instructions on-screen to start the game. Your input for name must be **10 characters or fewer**. Then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
+> -The player’s board won't be visible on the screen, but you'll see when the computer hits your ships and be notified when the game ends or the shot limit is reached.
 ![Tux, the Linux mascot](/readme.images/enter.name.png)
 ---
 - ( X )  in blue its mean you miss.
@@ -93,17 +94,17 @@
 ![Tux, the Linux mascot](/readme.images/not.inrang.png)
 
 ---
-- If 12 shots and not sink all ships, game will end, The winner is the one who get the high scores
+- If 12 shots and not sink all ships, game will end, The winner is the one who get the high scores. 
 ![Tux, the Linux mascot](/readme.images/i.won.png)
 --- 
-> - If scores will be equal for both player and computer the message will - It's a tie!
+> - If scores will be equal for both player and computer the message will - It's a tie!.
 ![Tux, the Linux mascot](/readme.images/tie.last.png)
 ---
-- If you want to start the game again, enter y to start or n to end the game . and second option is to RUN PROGRAM again.
+- If you want to start the game again, enter y to start or n to end the game, and second option is to click on RUN PROGRAM again.
 ![Tux, the Linux mascot](/readme.images/two.option.png)
 
 ## **import**
-- os: used for adding a clear() function
+- os: used for adding a clear() function.
 - import platform: used to perform OS-specific tasks, such as clearing the console screen.
 
 ## Frameworks and Programs Used
@@ -129,12 +130,12 @@
    5. Create app.
    6. Click GitHub, connect to Github.
    7. Go to the settings tab.
-   8.  Config vars
+   8.  Config vars.
    9.  KEY is (PORT) and VALUE is (8000) then click ADD. 
    10. Add buildpack.
    11. Select Python, then save changes.
    12. Select Nodejs, then save changes.
-   13. Ensure that Heroku/Python is at the top of the list, followed by Heroku/Nodejs
+   13. Ensure that Heroku/Python is at the top of the list, followed by Heroku/Nodejs.
    14. Go to the deploy tab and Select github.
    15. Confirm what I want to connect to github.
    16. Now we can search for github repository name. 
@@ -151,19 +152,18 @@
 
 > ## Bugs
  - **Resolved Bugs**
-  - I missed capitalize (Style) in the print statement to color the header.It solved
+  - I missed capitalize (Style) in the print statement to color the header. Solved
 
      ![Tux, the Linux mascot](/readme.images/s.should.be.capital.png)
-  - I found extra dot at the end of the input option. It solved.
+  - I found extra dot at the end of the input option. Solved.
 
       ![Tux, the Linux mascot](/readme.images/bug.extra.png)
-- AttributeError: "str" object has no attribute "name".Then I ensure that the class is defined correctly and the name attribute is properly assigned in the __init__ method. it solved.
-
+- AttributeError: "str" object has no attribute "name".Then I ensure that the class is defined correctly and the name attribute is properly assigned in the __init__ method. Solved.
       ![Tux, the Linux mascot](/readme.images/bugs.python.png)
 - Name: error "randint" is not defined, solved by typing correct name.  
       ![Tux, the Linux mascot](/readme.images/bug.randint.png)
 
-- This error appear when I forgot to import the platform in the top of the file. It solved.
+- This error appear when I forgot to import the platform in the top of the file. Solved.
       ![Tux, the Linux mascot](/readme.images/platform.forgot.png)
 - Indentation errors - Received indentation errors e.g "line code too long, over-indented and trailing whitespace" Fixed the indentation by ensuring all code lines in the functions were correctly aligned.
       ![Tux, the Linux mascot](/readme.images/indentation.png)   
@@ -176,11 +176,11 @@
 ## Credits  
  - The main structure of this game coming from code institute. I used **Code Institute’s** code for my Battleships project to leverage their reliable solutions and best practices. This foundation provided proven techniques and efficient problem-solving. I then integrated my code to customize and complete the project, ensuring it met specific requirements and aligned with Python programming goals. Here is the link:".<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>.
  - This video help me to understand basic of python, <https://www.youtube.com/watch?v=XKHEtdqhLK8>
- - Those two websites gave me ideas on how to Building the gameboard.
+ - I visited those two websites to see how battleships board built.
  - <https://teamtreehouse.com/community/dont-know-how-to-start-python-project-2-battleship>
  - <https://stackoverflow.com/questions/53446425/creating-a-row-of-numbers-letters-in-my-python-battleship-game>
  - For the functions, while loop, I have used stack overflow for idea.
- - Thanks to my friend, who can Python,(Talal Shemeri). Tt was great experience to discuss how functions and loops work in python.E-mail to (Talal Shemeri) orange.2009@hotmail.com
+ - Thanks to my friend, who has knowledge of Python,(Talal Shemeri). Tt was great experience to discuss how functions and loops work in python.
 
  
 
@@ -188,6 +188,7 @@
  - I want to thank my mentor, **Luke Buchanan**, for his invaluable support and guidance during this project. His expertise was essential in overcoming challenges and improving the game.
  - Special thanks to my family for their support while I was deeply immersed in development. Their encouragement and belief in me have been a continual source of motivation."
  - I am deeply grateful for the wealth of resources and tutorials available online, which have been pivotal in acquiring the skills and knowledge necessary for this project. The open-source community and diverse educational platforms have played a crucial role in my development journey, providing invaluable support and inspiration.
+ -In conclusion, I want to express my gratitude to the Code Institute for the opportunity to acquire these new skills and develop this enjoyable game.
  
 
 
