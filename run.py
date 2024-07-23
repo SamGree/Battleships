@@ -153,16 +153,16 @@ def play_game(player_board, computer_board, max_shots):
 
     if player_shots >= max_shots or computer_shots >= max_shots:
         print("Game over! Maximum number of shots reached.")
-        print("\nFinal scores:")
+        print(f"{Fore.RED}\nFinal scores:")
         print(f"Your scores: {scores['player']}")
         print(f"Computer scores: {scores['computer']}")
 
         if scores['player'] > scores['computer']:
-            print(f"Congratulations {player_board.name}! You won!")
+            print(f"{Fore.RED}Congratulations {player_board.name}! You won!")
         elif scores['computer'] > scores['player']:
-            print(f"Computer won! Better luck next time, {player_board.name}!")
+            print(f"{Fore.RED}Computer won! Better luck next time, {player_board.name}!")
         else:
-            print("It's a tie!")
+            print(F"{Fore.RED}It's a tie!")
 
 
 def clear_screen():
@@ -199,14 +199,14 @@ def new_game():
     print("-" * 35)
 
     while True:
-        option = input("-Type 'e' to exit 'c' to continue: ").lower()
+        option = input("-Type 'c' to continue 'e' to exit: ").lower()
         if option == 'e':
             print("Goodbye")
             return False
         elif option == 'c':
             break
         else:
-            print("Invalid. Please type 'e' to exit or 'c' to continue.")
+            print("Invalid. Please type 'c' to continue or 'e' to exit.")
 
     while True:
         player_name = input("-Your name Please?\n ")
