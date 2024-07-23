@@ -40,7 +40,7 @@
 - **Random Choice:** Computer moves are randomized using random_point() for unpredictable gameplay.
 - **Text-Based Interface:** Simple implementation with colorama for color enhancements.
 #### **Flowchart**
-![Tux, the Linux mascot](/readme.images/flowchart.final.png)
+![Tux, the Linux mascot](/readme.images/flowchart.last.png)
 
 ## Features
 - Classic Battleships game: Player against the computer.
@@ -70,7 +70,7 @@
   - Board Size: The game is played on a 5x5 grid.
   - Ships: Each player has 5 ships.
   - Shots: Enter the row and column to make a shot (coordinates between 0 and 4).
-  - Winning: Sink all the opponent's ships within 12 shots to win the game.
+  - Winning: Sink all the opponent's ships within 12 shots to win the game or High scores are recorded once the shot limit is reached.
   - Type ( e ) to exit or ( c ) to start the game.
   - As a player to enter your name to start the game: your input must be ***10 characters or fewer*** .
    ![Tux, the Linux mascot](/readme.images/new.instruction.png)
