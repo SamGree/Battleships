@@ -182,7 +182,7 @@ def clear_screen():
     """
     if platform.system() == "Windows":
         os.system('cls')
-    elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
+    elif platform.system() in ["Linux", "Darwin"]:
         os.system('clear')
     else:
         print("\n" * 100)

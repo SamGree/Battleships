@@ -170,7 +170,7 @@
  - <https://teamtreehouse.com/community/dont-know-how-to-start-python-project-2-battleship>
  - <https://stackoverflow.com/questions/53446425/creating-a-row-of-numbers-letters-in-my-python-battleship-game>
  - For the functions, while loop, I have used stack overflow for idea.
- - Thanks to my friend, who can Python,(Talal Shemeri). Tt was great experience to discuss how functions and loops work in python.E-mail  **orange.2009@hotmail.com**
+ - Thanks to my friend, who can Python,(Talal Shemeri). Tt was great experience to discuss how functions and loops work in python.E-mail to (Talal Shemeri) orange.2009@hotmail.com
 
  
 
