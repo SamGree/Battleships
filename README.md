@@ -16,6 +16,7 @@
 - [Usage](#usage)
 - [Game Rules](#game-rules)
 - [How To Play](#how-to-play)
+- [Frameworks and Programs Used](#frameworks-and-programs-used)
 - [Deployment](#deployment)
 - [Testing](#testing)
 - [Bugs](#bugs)
@@ -101,12 +102,17 @@
 - If you want to start the game again, enter y to start or n to end the game . and second option is to RUN PROGRAM again.
 ![Tux, the Linux mascot](/readme.images/two.option.png)
 
-
-
 ## **import**
 - os: used for adding a clear() function
 - import platform: used to perform OS-specific tasks, such as clearing the console screen.
 
+## Frameworks and Programs Used
+- Visual Studio Code
+   - The entire site was developed using Visual Studio Code.
+- GitHub
+   - GitHub was used to host the code online and acts as the source repository for Heroku.
+- Heroku     
+   - This was used to deploy my Python terminal application online once connected to my GitHub. 
 
 ## Deployment
 
@@ -168,7 +174,7 @@
 
 
 ## Credits  
- - The main structure of this game coming from code institute. I used **Code Institute’s** code for my Battleships project to leverage their reliable solutions and best practices. This foundation provided proven techniques and efficient problem-solving. I then integrated my own code to customize and complete the project, ensuring it met specific requirements and aligned with Python programming goals. Here is the link to that page:".<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>.
+ - The main structure of this game coming from code institute. I used **Code Institute’s** code for my Battleships project to leverage their reliable solutions and best practices. This foundation provided proven techniques and efficient problem-solving. I then integrated my code to customize and complete the project, ensuring it met specific requirements and aligned with Python programming goals. Here is the link:".<https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/>.
  - This video help me to understand basic of python, <https://www.youtube.com/watch?v=XKHEtdqhLK8>
  - Those two websites gave me ideas on how to Building the gameboard.
  - <https://teamtreehouse.com/community/dont-know-how-to-start-python-project-2-battleship>
