@@ -153,16 +153,16 @@ def play_game(player_board, computer_board, max_shots):
 
     if player_shots >= max_shots or computer_shots >= max_shots:
         print("Game over! Maximum number of shots reached.")
-        print(f"{Fore.RED}\nFinal scores:")
+        print(Fore.GREEN + "\nFinal scores:" + Style.RESET_ALL)
         print(f"Your scores: {scores['player']}")
         print(f"Computer scores: {scores['computer']}")
 
         if scores['player'] > scores['computer']:
-            print(f"{Fore.RED}Congratulations {player_board.name}! You won!")
+            print(f"Congratulations {player_board.name}! You won!")
         elif scores['computer'] > scores['player']:
-            print(f"{Fore.RED}Computer won! Better luck next time, {player_board.name}!")
+            print(f"Computer won! Better luck next time, {player_board.name}!")
         else:
-            print(F"{Fore.RED}It's a tie!")
+            print("It's a tie!")
 
 
 def clear_screen():
@@ -229,7 +229,8 @@ def new_game():
 def main():
     while new_game():
         while True:
-            play_again = input("Do you want to play again? (y / n): ").lower()
+            play_again = input(Fore.YELLOW +
+                               "Do you want to play again? (y / n):").lower()
             if play_again in ["y", "n"]:
                 break
             print("Invalid input. Type 'y' to play again or 'n' to exit.")
