@@ -98,7 +98,7 @@
 > - If scores will be equal for both player and computer the message will - It's a tie!
 ![Tux, the Linux mascot](/readme.images/tie.last.png)
 ---
-- If you want to start the game again, enter y to start or n to end the game . and second option in RUN PROGRAM.
+- If you want to start the game again, enter y to start or n to end the game . and second option is to RUN PROGRAM again.
 ![Tux, the Linux mascot](/readme.images/two.option.png)
 
 
@@ -136,8 +136,12 @@
 
 > ## Testing
 > - All of the code within this program was tested using Code Institute's PEP8.
-> ![Tux, the Linux mascot](/readme.images/pep8.png)
-> ![Tux, the Linux mascot](/readme.images/pep8.second.png)
+> ![Tux, the Linux mascot](/readme.images/code.one.png)
+> ![Tux, the Linux mascot](/readme.images/code.two.png)
+> ![Tux, the Linux mascot](/readme.images/code.three.png)
+> ![Tux, the Linux mascot](/readme.images/code.four.png)
+> ![Tux, the Linux mascot](/readme.images/code.five.png)
+> ![Tux, the Linux mascot](/readme.images/code.six.png)
 
 > ## Bugs
  - **Resolved Bugs**
