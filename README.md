@@ -78,7 +78,7 @@
 
 > ## How to play
 > - Follow the instructions on-screen to start the game. Your input for name must be **10 characters or fewer**. Then computer  board grid will be displayed on screen with hidden ships. Row will be first to write between 0  to 4, then col will be next to write between 0 to 4 .
-> -The player’s board won't be visible on the screen, but you'll see when the computer hits your ships and be notified when the game ends or the shot limit is reached.
+> - The player’s board won't be visible on the screen, but you'll see when the computer hits your ships and be notified when the game ends or the shot limit is reached.
 ![Tux, the Linux mascot](/readme.images/enter.name.png)
 ---
 - ( X )  in blue its mean you miss.
