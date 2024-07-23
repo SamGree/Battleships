@@ -106,7 +106,7 @@ def make_guess(board):
     while True:
         try:
             x = int(input(Fore.CYAN + "Guess Row: "))
-            y = int(input(Fore.MAGENTA + "Guess Col: "))
+            y = int(input("Guess Col: "))
             valid_coords = valid_coordinates(x, y, board.size)
             new_guess = (x, y) not in board.guesses
             if valid_coords and new_guess:
