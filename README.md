@@ -1,7 +1,7 @@
 # *Battleships Game*
 
   - Creating a Battleships game was a chance to combine my love for strategy and programming. I wanted to design a game that’s simple yet engaging, where players can test their tactical skills. It’s also a fun way to practice coding and game design, making it an enjoyable project from both a technical and creative perspective. Thanks to code institute for this chance. Plus I used to play Battleship game with my son when he was younger.
-  > - Link to the battleships game 
+  > - Link to the battleships game .
   > <https://battleships-sam-f594730cad42.herokuapp.com/>
 
   ![Tux, the Linux mascot](/readme.images/ami.responsive.png) 
